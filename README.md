@@ -1,29 +1,63 @@
-# Likya Yapı PHP Sunum Paketi
+# Mimari Ürünler İçin Kurumsal Web Sitesi
 
-Bu paket, Likya Yapı web sitesinin PHP 8+ uyumlu teslim sürümüdür. Tasarım, gömülü görseller, katalog arşivi, responsive kurallar ve istemci tarafı etkileşimleri `index.php` içinde bulunur.
+Mimari ürünlerin, markaların, katalogların ve referans projelerin tanıtımı için PHP, HTML, CSS ve JavaScript kullanılarak geliştirilmiş bir web sitesi projesidir.
 
-Katalog arşivindeki varsayılan kart görselleri, eksik veya yarım yüklenmeyi önlemek için `assets/katalog/fallback` altındaki optimize WebP dosyalarından sunulur. Markaya özel kapaklar yine `assets/katalog` klasörüne `assets/katalog/README.txt` içindeki adlarla eklenebilir.
+Proje; ürün koleksiyonlarını keşfetmeyi, kataloglara ulaşmayı ve referans projeleri incelemeyi sağlayan, masaüstü, tablet ve mobil ekranlara uyumlu bir arayüz sunar.
 
-## Hosting üzerinde yayınlama
+## Özellikler
 
-Klasördeki bütün dosyaları PHP 8 veya üzeri çalışan hostingin `public_html` klasörüne yükleyin. Apache kullanılıyorsa `.htaccess` yönlendirmeleri otomatik çalışır.
+- Responsive arayüz ve farklı ekran boyutlarına özel düzenlemeler
+- Marka ve ürün gruplarına göre içerik sunumu
+- Ürün detayları ve benzer ürün önerileri
+- Katalog arşivi ve markaların katalog sayfalarına bağlantılar
+- Referans projeler ve projelerde kullanılan ürünlerin gösterimi
+- Çok dil desteği
+- Blog, showroom ve iletişim bölümleri
+- JavaScript ile etkileşimli gezinme ve arayüz bileşenleri
 
-## Bilgisayarda çalıştırma
+## Kullanılan Teknolojiler
 
-PHP kuruluysa `BASLAT.bat` dosyasına çift tıklayın ve `http://localhost:8080` adresini açın.
+| Teknoloji | Kullanım |
+| --- | --- |
+| **PHP 8+** | Uygulamanın sunulması ve yerel sunucu yönlendirmesi |
+| **HTML** | Sayfa ve içerik yapısı |
+| **CSS** | Görsel tasarım ve responsive düzen |
+| **JavaScript** | İstemci tarafı etkileşimleri ve dil desteği |
 
-Alternatif olarak klasörde terminal açıp şu komutu çalıştırın:
+## Proje Yapısı
 
-```text
-php -S localhost:8080 router.php
-```
+- **`index.php`**: Ana uygulama; sayfa içerikleri, stiller ve istemci tarafı kodları
+- **`router.php`**: PHP yerleşik sunucusu için yönlendirme
+- **`.htaccess`**: Apache yönlendirme ayarları
+- **`BASLAT.bat`**: Windows için yerel başlatıcı
+- **`assets/i18n.css`**: Dil desteğiyle ilgili stiller
+- **`assets/i18n.js`**: Dil desteğiyle ilgili JavaScript kodu
+- **`assets/brands/`**: Marka logoları
+- **`assets/katalog/`**: Katalog kapakları ve ilgili dosyalar
+- **`assets/katalog/fallback/`**: Varsayılan katalog kartı görselleri
 
-XAMPP kullanılıyorsa klasörü `htdocs` içine taşıyıp Apache'yi başlatabilirsiniz.
+## Yerel Ortamda Çalıştırma
 
-## Ana dosyalar
+Bilgisayarınızda **PHP 8 veya üzeri** kurulu olmalıdır.
 
-- `index.php`: Web sitesinin tamamı
-- `router.php`: PHP yerel sunucu yönlendirmesi
-- `.htaccess`: Apache yönlendirme ve güvenlik başlıkları
-- `BASLAT.bat`: Windows yerel başlatıcı
-- `assets/katalog/fallback`: Katalog kartlarının optimize varsayılan kapakları
+1. Depoyu indirin veya klonlayın.
+2. Terminali `index.php` dosyasının bulunduğu klasörde açın.
+3. Aşağıdaki komutu çalıştırın:
+
+   ```bash
+   php -S localhost:8080 router.php
+   ```
+
+4. Tarayıcıda [http://localhost:8080](http://localhost:8080) adresini açın.
+
+**Windows:** PHP komutu PATH üzerinden erişilebiliyorsa `BASLAT.bat` dosyasıyla da başlatılabilir.
+
+**Not:** Yerel sunucu çalıştığı sürece terminal penceresi açık kalmalıdır.
+
+## Mimari Not
+
+Bu sürümde içerik ve arayüzün büyük bölümü `index.php` içinde tutulur. `router.php` ve `.htaccess`, uygulama rotalarını bu giriş dosyasına yönlendirir. Görsellerin bir bölümü ana dosyaya gömülüdür; diğer varlıklar `assets` klasöründe bulunur.
+
+## Proje Durumu
+
+Bu depo, geliştirilen web sitesinin kaynak kodlarını içerir. Bu sürüm için canlı demo bağlantısı bulunmamaktadır.
