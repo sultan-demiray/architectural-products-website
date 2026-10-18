@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Serve real files and directories normally; send every application route to
+# the PHP front controller so clean URLs also work after a browser refresh.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]

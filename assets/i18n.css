@@ -1,0 +1,3384 @@
+.header { position: absolute; }
+/* Only the requested desktop reference title and mobile text groups. */
+@media (min-width:1200px) {
+  html body #app#app#app:has(.reference-detail-enhanced .product-gallery-thumbs[aria-label^="Radisson Blu Resort & Spa "]) > .hero.inner-hero .hero-copy > h1 {
+    width:max-content!important;
+    max-width:90vw!important;
+    white-space:nowrap!important;
+  }
+}
+@media (max-width:560px) {
+  html body #app#app#app .brands-carousel .brands-story-copy,
+  html body #app#app#app .related-products .related-products-head > div {
+    text-align:center!important;
+  }
+}
+/* Home product groups only: retain the existing desktop grid and mobile stack. */
+.home-product-groups .home-product-controls { display:none; }
+.home-product-groups .home-product-status {
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0;
+}
+@media (min-width:561px) {
+  .home-product-groups [data-home-product-extra-card] {min-width:0;}
+  .home-product-groups .home-product-carousel {
+    --home-arrow-outset:clamp(0px,4vw,38px);
+    display:grid;grid-template-columns:32px minmax(0,1fr) 32px;
+    column-gap:6px;align-items:center;min-width:0;
+    margin-inline:calc(-1 * var(--home-arrow-outset));
+  }
+  .home-product-groups .home-product-carousel > .category-grid {
+    grid-column:2;grid-row:1;min-width:0;
+  }
+  .home-product-groups .home-product-controls {
+    display:contents;
+  }
+  .home-product-groups .home-product-controls button {
+    width:32px;height:32px;display:grid;place-items:center;
+    grid-row:1;align-self:center;
+    border:1px solid rgba(71,57,48,.48);border-radius:50%;
+    background:transparent;color:#29221e;cursor:pointer;
+    transition:background .2s,color .2s,border-color .2s;
+  }
+  .home-product-groups [data-home-product-prev] {grid-column:1;}
+  .home-product-groups [data-home-product-next] {grid-column:3;}
+  .home-product-groups .home-product-controls button svg {
+    width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;
+    stroke-linecap:round;stroke-linejoin:round;
+  }
+  .home-product-groups .home-product-controls button:not(:disabled):hover,
+  .home-product-groups .home-product-controls button:focus-visible {
+    background:#29221e;border-color:#29221e;color:#fff;outline:none;
+  }
+  .home-product-groups .home-product-controls button:disabled {opacity:.4;cursor:default;}
+}
+@media (min-width:561px) and (max-width:850px) {
+  .home-product-groups .home-product-carousel {--home-arrow-outset:14px;}
+  html body #app#app#app .home-product-groups .home-product-carousel > .category-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:none!important;
+  }
+}
+.hero.home-slider-ready .home-hero-slide,
+.hero:not(.inner-hero) .home-hero-slide{
+  filter:none!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  transition:none!important;
+}
+
+/* Mobile-only carousel navigation: place the existing buttons beside the viewport. */
+@media (max-width:560px) {
+  html body #app#app#app .related-products-head > div {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  html body #app#app#app .related-products-head h2 {
+    white-space: nowrap !important;
+  }
+
+  html body #app#app#app .related-products-mobile-window {
+    position: relative !important;
+    min-width: 0 !important;
+    margin-right: 25px !important;
+    margin-left: 25px !important;
+  }
+
+  html body #app#app#app .related-products-mobile-window > .related-products-grid {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  html body #app#app#app .related-products-mobile-window > .related-products-actions {
+    position: absolute !important;
+    z-index: 3 !important;
+    top: 50% !important;
+    left: -40px !important;
+    display: flex !important;
+    width: calc(100% + 80px) !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    transform: translateY(-50%) !important;
+    pointer-events: none !important;
+  }
+
+  html body #app#app#app .related-products-mobile-window > .related-products-actions button {
+    pointer-events: auto !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport.reference-products-viewport {
+    position: relative !important;
+    overflow: visible !important;
+    width: auto !important;
+    margin-right: 25px !important;
+    margin-left: 25px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport.reference-products-viewport > .reference-refresh-controls {
+    position: absolute !important;
+    z-index: 3 !important;
+    top: 50% !important;
+    left: -40px !important;
+    display: flex !important;
+    width: calc(100% + 80px) !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+    pointer-events: none !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport.reference-products-viewport > .reference-refresh-controls button {
+    pointer-events: auto !important;
+  }
+}
+
+/* Keep catalogue artwork and legal-page hero artwork visible as one image. */
+html body #app#app#app .catalogue-card-expanded .catalogue-cover-clean{
+  position:relative!important;
+  aspect-ratio:4/5!important;
+  overflow:hidden!important;
+  background:#d8ccc3!important;
+}
+html body #app#app#app .catalogue-card-expanded .catalogue-cover-clean>img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+html body #app#app#app .legal-hero{
+  background-position:center center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Mobil ana sayfa baslik/aksiyon satirlari ve Markalar iki sutun duzeni. */
+@media (max-width: 560px) {
+  html body #app#app#app > .hero + .split.intro + .section > .section-head,
+  html body #app#app#app > .section.projects > .section-head {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+  }
+
+  html body #app#app#app > .hero + .split.intro + .section > .section-head > h2,
+  html body #app#app#app > .section.projects > .section-head > h2 {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.025em !important;
+  }
+
+  html body #app#app#app > .hero + .split.intro + .section > .section-head > h2 {
+    font-size: clamp(16px, 4.4vw, 18px) !important;
+  }
+
+  html body #app#app#app > .section.projects > .section-head > h2 {
+    font-size: clamp(19px, 5.4vw, 21px) !important;
+  }
+
+  html body #app#app#app > .hero + .split.intro + .section > .section-head > a,
+  html body #app#app#app > .section.projects > .section-head > a {
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: none !important;
+    min-height: 38px !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    padding: 9px 12px !important;
+    font-size: 9px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app#app#app .brand-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  html body #app#app#app .brand-page-grid > .brand-page-card {
+    min-width: 0 !important;
+    min-height: 125px !important;
+    padding: 12px !important;
+  }
+
+  html body #app#app#app .product-index-section .products-grid .product-card > div > span,
+  html body #app#app#app .catalog-section .catalog-grid .catalog-card .catalog-card-label,
+  html body #app#app#app .related-products .related-product-card > b {
+    display: none !important;
+  }
+}
+
+/* Tablet teslim duzeltmeleri: metin genisligi ve eksik gorunen ayiricilar. */
+@media (min-width: 561px) and (max-width: 900px) {
+  html body #app .about-process .steps > article {
+    min-width: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 10px !important;
+  }
+
+  html body #app .about-process .steps > article > h3,
+  html body #app .about-process .steps > article > p {
+    width: 100% !important;
+    max-width: none !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+
+  html body #app .references-index-section .other-refs > div,
+  html body #app .product-detail-enhanced .legacy-detail-specs > div {
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  html body #app > footer.footer {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    grid-template-columns: repeat(2, minmax(0, 280px)) !important;
+    justify-content: center !important;
+    column-gap: clamp(56px, 9vw, 72px) !important;
+    row-gap: 34px !important;
+    padding-left: clamp(20px, 4vw, 32px) !important;
+    padding-right: clamp(20px, 4vw, 32px) !important;
+  }
+
+  html body #app > footer.footer > div:not(.legal) {
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  html body #app > footer.footer > .legal {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+    margin-top: 0 !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  html body #app > footer.footer > .legal > span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px 12px !important;
+    max-width: 100% !important;
+    font-size: 15px !important;
+    margin-top: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app > footer.footer > .legal a {
+    display: inline-block !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    white-space: nowrap !important;
+  }
+  html body #app > footer.footer > .legal a + a::before {
+    content: "|";
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
+/* Yalnizca sorunlu kart gorsellerini kutularina tam oturt. */
+.related-product-thumb,
+.reference-card-image{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+.blog-side-post img{
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+
+/* Final contact details order: address alone, email and phone below. */
+body:has(.contact) .contact-details-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-areas:"address address" "email phone"!important;
+}
+body:has(.contact) .contact-details-grid [data-contact-kind="hours"]{
+  display:none!important;
+}
+html body:has(.contact) #app .contact.section>div:first-child .contact-details-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-areas:"address address" "email phone"!important;
+}
+html body:has(.contact) #app .contact.section>div:first-child .contact-details-grid>[data-contact-kind="hours"]{
+  display:none!important;
+}
+
+/* Laptop/tablet brand intro: image-free, single-line title. */
+@media(min-width:561px){
+  html body #app .brands-carousel .brands-story{
+    display:block!important;
+    position:relative!important;
+    margin-bottom:38px!important;
+  }
+  html body #app .brands-carousel .brands-story-image{
+    display:none!important;
+  }
+  html body #app .brands-carousel .brands-story-copy{
+    width:100%!important;
+    max-width:none!important;
+  }
+  html body #app .brands-carousel .brands-story-copy h2{
+    white-space:nowrap!important;
+    font-size:clamp(34px,4.2vw,64px)!important;
+    letter-spacing:-.045em!important;
+  }
+  html body #app .brands-carousel .brands-story-copy h2 br{
+    display:inline-block!important;
+    width:.22em!important;
+    content:""!important;
+  }
+}
+@media(min-width:561px) and (max-width:900px){
+  html body #app .brands-carousel .brands-story{
+    margin-bottom:32px!important;
+  }
+  html body #app .brands-carousel .brands-story-copy{
+    padding-right:150px!important;
+  }
+  html body #app .brands-carousel .brands-carousel-bar{
+    position:absolute!important;
+    right:0!important;
+    bottom:-4px!important;
+    margin:0!important;
+    min-height:0!important;
+    transform:none!important;
+    align-items:center!important;
+  }
+}
+
+/* Final contact text sizing and rhythm. */
+html body:has(.contact) #app .contact.section>div:first-child
+.contact-details-grid>[data-contact-kind="address"] .contact-item-copy{
+  width:auto!important;
+  max-width:none!important;
+  overflow:visible!important;
+}
+html body:has(.contact) #app .contact.section>div:first-child
+.contact-details-grid>[data-contact-kind="address"] .contact-item-copy span{
+  width:auto!important;
+  max-width:none!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+}
+@media(max-width:850px){
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid .contact-item-copy b{
+    font-size:15px!important;
+    line-height:1.35!important;
+    letter-spacing:.012em!important;
+    margin-bottom:5px!important;
+  }
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid .contact-item-copy span{
+    font-size:13px!important;
+    line-height:1.5!important;
+    letter-spacing:.012em!important;
+    overflow-wrap:normal!important;
+  }
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid>[data-contact-kind="email"] .contact-item-copy span{
+    letter-spacing:.025em!important;
+    white-space:nowrap!important;
+  }
+}
+@media(max-width:560px){
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid .contact-item-copy b{
+    font-size:14px!important;
+  }
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid .contact-item-copy span{
+    font-size:11px!important;
+    line-height:1.55!important;
+  }
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid>[data-contact-kind="email"] .contact-item-copy span{
+    letter-spacing:.02em!important;
+  }
+}
+@media(max-width:360px){
+  html body:has(.contact) #app .contact.section>div:first-child
+  .contact-details-grid .contact-item-copy span{
+    font-size:10.5px!important;
+  }
+}
+
+/* Keep every mobile brand wordmark fully inside and optically centred. */
+@media(max-width:560px){
+  html body #app .brands-carousel .brand-logo-card{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:10px!important;
+    text-align:center!important;
+  }
+  html body #app .brands-carousel .brand-logo-card .brand-logo{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin:0 auto!important;
+    transform:scale(.74)!important;
+    transform-origin:center center!important;
+    white-space:nowrap!important;
+  }
+  html body #app .brands-carousel .brand-logo-card:hover .brand-logo,
+  html body #app .brands-carousel .brand-logo-card:focus-visible .brand-logo,
+  html body #app .brands-carousel .brand-logo-card.selected .brand-logo{
+    transform:scale(.74)!important;
+  }
+}
+
+/* Keep mobile brand navigation visible beside (not inside/below) the frame. */
+@media(max-width:560px){
+  html body #app .brands-carousel .brands-carousel-window{
+    overflow:visible!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    z-index:99!important;
+    pointer-events:none!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions button{
+    display:grid!important;
+    place-items:center!important;
+    visibility:visible!important;
+    opacity:1!important;
+    background:#e7ddd6!important;
+    border:1px solid rgba(33,29,26,.5)!important;
+    color:#211d1a!important;
+    pointer-events:auto!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions button svg{
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    stroke:currentColor!important;
+  }
+}
+.header .lang { display:none !important; }
+
+/* Both contact forms share one measured grid cell, so switching tabs never
+   changes the outer panel's size or border position. */
+body:has(.contact) .contact,
+body:has(.contact) .contact:has([data-contact-panel="general"].active),
+body:has(.contact) .contact:has([data-contact-panel="professional"].active){
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr)!important;
+}
+.contact-form-area{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+  align-content:start!important;
+  padding:28px 30px 30px!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+}
+.contact-form-area>.contact-form-tabs,
+body:has(.contact) .contact-form-area:has([data-contact-panel="general"].active)>.contact-form-tabs,
+body:has(.contact) .contact-form-area:has([data-contact-panel="professional"].active)>.contact-form-tabs{
+  grid-column:1!important;
+  grid-row:1!important;
+  margin-bottom:30px!important;
+}
+.contact-form-area>.contact-form-tabs button,
+body:has(.contact) .contact-form-area:has([data-contact-panel="general"].active)>.contact-form-tabs button,
+body:has(.contact) .contact-form-area:has([data-contact-panel="professional"].active)>.contact-form-tabs button{
+  padding:15px 10px!important;
+}
+.contact-form-area>.contact-choice-panel{
+  display:block!important;
+  grid-column:1!important;
+  grid-row:2!important;
+  min-width:0!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+.contact-form-area>.contact-choice-panel.active{
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+@media(max-width:560px){
+  .contact-form-area{padding:24px 20px 28px!important}
+}
+@media(max-width:1180px) and (min-width:851px){
+  body:has(.contact) .contact,
+  body:has(.contact) .contact:has([data-contact-panel="general"].active),
+  body:has(.contact) .contact:has([data-contact-panel="professional"].active){
+    grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)!important;
+  }
+}
+@media(max-width:850px){
+  body:has(.contact) .contact,
+  body:has(.contact) .contact:has([data-contact-panel="general"].active),
+  body:has(.contact) .contact:has([data-contact-panel="professional"].active){grid-template-columns:1fr!important}
+}
+
+/* Related products keep the same image-first card language at every size:
+   four cards on desktop, three on tablet and two on mobile. */
+body:has(.related-products) .related-product-card{
+  flex:0 0 calc((100% - 36px)/4)!important;
+  grid-template-columns:1fr!important;
+  align-content:start!important;
+  align-items:start!important;
+  gap:10px!important;
+  min-height:0!important;
+  padding:10px!important;
+}
+body:has(.related-products) .related-product-thumb{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:1/1!important;
+}
+body:has(.related-products) .related-product-card>b{
+  grid-column:1!important;
+  justify-self:start!important;
+}
+@media(max-width:1100px) and (min-width:561px){
+  body:has(.related-products) .related-product-card{
+    flex-basis:calc((100% - 24px)/3)!important;
+  }
+}
+
+/* Mobile product journey: keep the same two-column rhythm used on tablet. */
+@media(max-width:560px){
+  body:has(.product-index-section) .product-index-section .products-grid,
+  body:has(.catalog-section) .catalog-section .catalog-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:6px!important;
+  }
+  body:has(.product-index-section) .product-index-section .product-card,
+  body:has(.catalog-section) .catalog-section .catalog-card{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:0!important;
+    aspect-ratio:.82/1!important;
+    padding:12px!important;
+  }
+  body:has(.product-index-section) .product-index-section .product-card>div,
+  body:has(.catalog-section) .catalog-section .catalog-card>div{
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important;
+  }
+  body:has(.product-index-section) .product-index-section .product-card h3,
+  body:has(.catalog-section) .catalog-section .catalog-card h3{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    font-size:14px!important;
+    line-height:1.18!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    hyphens:none!important;
+  }
+  body:has(.product-index-section) .product-index-section .product-card>div>span,
+  body:has(.catalog-section) .catalog-section .catalog-card .catalog-card-label{
+    display:none!important;
+  }
+  body:has(.product-index-section) .product-index-section .product-card>div>span::after,
+  body:has(.catalog-section) .catalog-section .catalog-card .catalog-card-label::after{
+    content:none!important;
+    display:none!important;
+  }
+  body:has(.related-products) .related-product-card{
+    flex:0 0 calc((100% - 12px)/2)!important;
+    grid-template-columns:1fr!important;
+    align-content:start!important;
+    gap:8px!important;
+    min-height:0!important;
+    padding:8px!important;
+  }
+  body:has(.related-products) .related-product-thumb{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+  }
+  body:has(.related-products) .related-product-card>b{
+    grid-column:1!important;
+    justify-self:start!important;
+    padding:6px 9px!important;
+    font-size:8px!important;
+  }
+  .hero.inner-hero>.hero-breadcrumb{
+    top:96px!important;
+    left:18px!important;
+    right:18px!important;
+    flex-wrap:wrap!important;
+    gap:4px 6px!important;
+    overflow:visible!important;
+    white-space:normal!important;
+    font-size:10px!important;
+    line-height:1.35!important;
+    letter-spacing:.01em!important;
+  }
+  /* Satır kırılınca "•" işareti satır sonunda tek kalmasın: ayırıcı bir sonraki öğeyle birlikte taşınsın */
+  .hero.inner-hero>.hero-breadcrumb>span{
+    display:none!important;
+  }
+  .hero.inner-hero>.hero-breadcrumb>a:not(:first-child)::before,
+  .hero.inner-hero>.hero-breadcrumb>strong:not(:first-child)::before{
+    content:"•";
+    display:inline-block;
+    margin-right:6px;
+    opacity:.7;
+  }
+}
+.header .lang > svg { width: 18px; height: 12px; border-radius: 2px; overflow: hidden; }
+.header:has(.language-switch-inline){grid-template-columns:120px minmax(0,1fr) auto!important}
+.language-menu.language-switch-inline { position:static; z-index:1000; display:flex!important; grid-column:3; align-items:center; justify-content:flex-end; gap:8px; width:auto; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; color:#fff; }
+.language-menu button { display:flex; align-items:center; justify-content:center; width:38px; height:38px; min-height:38px; padding:7px; border:1px solid rgba(255,255,255,.4); border-radius:50%; background:rgba(20,19,18,.3); color:inherit; cursor:pointer; }
+.language-menu button{transition:opacity .18s ease,transform .18s ease,background .18s ease,box-shadow .18s ease!important}
+.language-menu button:not(.selected){opacity:.7}
+.language-menu button.selected{opacity:1;border-color:rgba(255,255,255,.88)!important;background:rgba(17,17,17,.5)!important;box-shadow:0 2px 8px rgba(0,0,0,.24)!important;transform:none}
+.language-menu button:hover,.language-menu button:focus-visible { background: rgba(255,255,255,.12); outline: none; }
+.language-menu svg { width:22px; height:15px; flex:0 0 22px; border-radius:2px; overflow:hidden; }
+@media(max-width:850px){.header:has(.language-switch-inline){grid-template-columns:72px minmax(0,1fr) auto!important}.language-menu.language-switch-inline{gap:5px}.language-menu button{width:34px;height:34px;min-height:34px;padding:6px}}
+@media(max-width:560px){.header:has(.language-switch-inline){grid-template-columns:72px 1fr auto!important}.language-menu.language-switch-inline{position:absolute;top:16px;right:14px}.header .lang>svg{width:18px!important;height:12px!important}}
+
+/* Keep the product enquiry fully visible in laptop and reduced-height views. */
+.product-inquiry-modal{box-sizing:border-box!important;padding:clamp(12px,2vh,24px)!important;overflow-y:auto!important;overscroll-behavior:contain}
+.product-inquiry-modal .product-inquiry-panel{box-sizing:border-box!important;width:min(560px,calc(100vw - 32px))!important;height:auto!important;min-height:0!important;max-height:calc(100dvh - 32px)!important;overflow-y:auto!important;margin:auto!important;padding:clamp(22px,3vh,32px) clamp(22px,3vw,36px)!important}
+.product-inquiry-modal .product-inquiry-form{gap:8px!important;align-content:start!important}
+.product-inquiry-modal .product-inquiry-form label{min-width:0!important}
+.product-inquiry-modal .product-inquiry-form input:not([type=checkbox]){height:42px!important;min-height:42px!important}
+.product-inquiry-modal .product-inquiry-form textarea{height:82px!important;min-height:82px!important;resize:vertical}
+.product-inquiry-modal .project-inquiry-consent,.product-inquiry-modal label:has(input[type=checkbox]){display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;align-items:start!important;gap:9px!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.35!important}
+.product-inquiry-modal .form-consent-box span{min-width:0!important;white-space:normal!important;overflow-wrap:anywhere!important;font-size:10px!important}
+.product-inquiry-modal input[type=checkbox]{width:16px!important;height:16px!important;margin:1px 0 0!important}
+@media(max-height:760px){.product-inquiry-modal .product-inquiry-panel{padding:18px 24px!important}.product-inquiry-modal .product-inquiry-panel h2{font-size:30px!important;margin:3px 0 6px!important}.product-inquiry-modal .project-inquiry-intro{margin-bottom:8px!important}.product-inquiry-modal .product-inquiry-form textarea{height:64px!important;min-height:64px!important}}
+
+/* The visual button captions are supplied by legacy ::after rules. Translate
+   that visible layer as well as the underlying accessible DOM text. */
+html[lang="en"] body #app .split.intro a::after{content:"About Us"!important}
+html[lang="en"] body #app .section-head>a[href="/urunler"]::after{content:"View All Products"!important}
+html[lang="en"] body #app .image-card span::after{content:"View"!important}
+html[lang="en"] body #app .product-card span::after{content:"View"!important}
+html[lang="en"] body #app .reference-grid a span::after,
+html[lang="en"] body #app .project-grid a span::after{content:"View"!important}
+html[lang="en"] body #app .projects .section-head>a::after{content:"View All Projects"!important}
+html[lang="en"] body #app .split.showroom a::after{content:"Book an Appointment"!important}
+html[lang="en"] body #app .cta a::after{content:"Contact Us"!important}
+html[lang="en"] body #app .catalog-card-label.collection-label::after{content:"Explore Collections"!important}
+html[lang="en"] body #app .catalog-card-label.product-label::after{content:"View Product"!important}
+
+/* Catalog category and brand pages: readable labels and clean button copy. */
+html body #app#app#app .catalog-section > .kicker{
+  font-size:12px!important;
+}
+html body #app#app#app .catalog-grid .catalog-card .catalog-card-label{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:38px!important;
+  padding:10px 16px!important;
+  font-size:13px!important;
+  line-height:1.15!important;
+  letter-spacing:.02em!important;
+  font-weight:600!important;
+  white-space:nowrap!important;
+}
+html body #app#app#app .catalog-grid .catalog-card .catalog-card-label::after{
+  content:none!important;
+  display:none!important;
+}
+
+@media (max-width:560px){
+  html body #app#app#app .catalog-grid .catalog-card .catalog-card-label{
+    min-height:34px!important;
+    padding:8px 13px!important;
+    font-size:12px!important;
+  }
+}
+html[lang="en"] body #app .pro-share-badge::after{content:"Share Your Project With Us"!important}
+html[lang="en"] body #app .related-product-card>b::after{content:"View"!important}
+
+/* Comfortable bottom breathing room and scrolling for both language variants. */
+.product-inquiry-modal .product-inquiry-panel{padding-bottom:32px!important;scroll-padding-bottom:32px!important}
+.product-inquiry-modal .project-inquiry-submit{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:48px!important;height:auto!important;flex:0 0 auto!important;margin:6px 0 2px!important;padding:13px 24px!important;line-height:1.25!important}
+
+/* Definitive product-form sizing: all content, including the submit button,
+   stays inside the viewport in both Turkish and English. */
+html body .product-inquiry-modal.is-open{align-items:center!important;padding:18px!important;overflow:auto!important}
+html body .product-inquiry-modal.is-open .product-inquiry-panel.product-inquiry-panel{
+  width:min(560px,calc(100vw - 36px))!important;height:auto!important;min-height:0!important;
+  max-height:calc(100dvh - 36px)!important;overflow-y:auto!important;
+  padding:24px 32px 28px!important;margin:auto!important;border-radius:0!important;
+}
+
+/* Header scale and spacing by device class. */
+@media(min-width:1025px){
+  #app>.hero>.header{
+    height:104px!important;grid-template-columns:168px minmax(0,1fr) 124px!important;
+    padding:0 5vw!important;
+  }
+  #app>.hero>.header .logo,#app>.hero>.header .logo img{width:92px!important;height:78px!important}
+  #app>.hero>.header nav{gap:42px!important}
+  #app>.hero>.header nav a{font-size:15px!important;font-weight:600!important}
+  #app>.hero>.header .language-menu.language-switch-inline{gap:9px!important}
+  #app>.hero>.header .language-menu button{width:45px!important;height:45px!important;min-height:45px!important;padding:8px!important}
+  #app>.hero>.header .language-menu svg{width:25px!important;height:17px!important}
+}
+
+@media(min-width:561px) and (max-width:1024px){
+  #app>.hero>.header{
+    height:124px!important;grid-template-columns:126px minmax(0,1fr) 110px!important;
+    padding:0 18px!important;column-gap:8px!important;
+  }
+  #app>.hero>.header .logo,#app>.hero>.header .logo img{width:118px!important;height:99px!important}
+  #app>.hero>.header nav{
+    min-width:0!important;gap:clamp(7px,1.15vw,16px)!important;
+    justify-content:center!important;white-space:nowrap!important;
+  }
+  #app>.hero>.header nav a{font-size:clamp(12px,1.5vw,15px)!important;font-weight:600!important}
+  #app>.hero>.header .language-menu.language-switch-inline{gap:8px!important}
+  #app>.hero>.header .language-menu button{width:49px!important;height:49px!important;min-height:49px!important;padding:9px!important}
+  #app>.hero>.header .language-menu svg{width:27px!important;height:18px!important}
+  #app>.hero.home-slider-ready .hero-copy,
+  #app>.hero:not(.inner-hero):has(.home-hero-slide) .hero-copy{bottom:230px!important}
+  /* Başlık 6px büyüdüğü için breadcrumb logonun altında kalsın */
+  #app>.hero.inner-hero>.hero-breadcrumb{top:132px!important}
+}
+
+/* Küçük tablet (561-767px): menü tek satıra sığmadığı için logo + diller üst satırda, menü alt satırda */
+@media(min-width:561px) and (max-width:767px){
+  #app>.hero>.header{
+    height:auto!important;min-height:0!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;
+    padding:12px 22px 10px!important;row-gap:2px!important;column-gap:12px!important;
+  }
+  #app>.hero>.header .logo{grid-column:1!important;grid-row:1!important;justify-self:start!important}
+  #app>.hero>.header .logo,#app>.hero>.header .logo img{width:104px!important;height:87px!important}
+  #app>.hero>.header .language-menu.language-switch-inline{grid-column:2!important;grid-row:1!important;justify-self:end!important}
+  #app>.hero>.header nav{
+    grid-column:1 / -1!important;grid-row:2!important;
+    width:100%!important;justify-content:center!important;
+    gap:clamp(10px,2vw,24px)!important;
+  }
+  #app>.hero>.header nav a{font-size:clamp(11.5px,2.05vw,14px)!important}
+  #app>.hero.inner-hero>.hero-breadcrumb{top:152px!important}
+}
+
+@media(max-width:560px){
+  :root{--mobile-header-height:86px!important}
+  #app>.hero>.header{height:var(--mobile-header-height)!important;grid-template-columns:88px minmax(0,1fr) auto auto!important;padding:0 13px!important;column-gap:7px!important}
+  #app>.hero>.header .logo,#app>.hero>.header .logo img{width:80px!important;height:68px!important}
+  #app>.hero>.header .language-menu.language-switch-inline{gap:5px!important}
+  #app>.hero>.header .language-menu button{width:38px!important;height:38px!important;min-height:38px!important;padding:7px!important}
+  #app>.hero>.header .language-menu svg{width:22px!important;height:15px!important}
+  #app>.hero>.header .mobile-menu-toggle{width:46px!important;height:46px!important}
+  #app>.hero>.header .mobile-menu-toggle span{width:20px!important}
+}
+
+/* Mobile footer: keep every group on one centered visual axis. */
+@media(max-width:560px){
+  .footer{
+    grid-template-columns:minmax(0,1fr)!important;
+    justify-items:center!important;
+    text-align:center!important;
+  }
+  .footer>div:not(.legal){
+    width:min(100%,340px)!important;
+    justify-self:center!important;
+    text-align:center!important;
+  }
+  .footer .footer-logo{
+    display:block!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .footer>div:first-child p,
+  .footer h4{
+    text-align:center!important;
+  }
+  .footer .footer-contact{
+    display:inline-grid!important;
+    width:auto!important;
+    max-width:100%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    transform:translateX(12px)!important;
+    text-align:left!important;
+  }
+  .footer .footer-contact-item{
+    justify-content:flex-start!important;
+    text-align:left!important;
+  }
+  .footer .socials{
+    justify-content:center!important;
+  }
+  .footer .legal{
+    width:100%!important;
+    justify-items:center!important;
+    text-align:center!important;
+  }
+  .footer .legal span{
+    justify-content:center!important;
+  }
+}
+
+.footer .socials .facebook-modern-icon{
+  width:15px!important;
+  height:15px!important;
+  fill:currentColor!important;
+  stroke:none!important;
+}
+
+/* Reference material selector: clean rows and gallery-style navigation. */
+.reference-layout-refresh .reference-used-products-head.is-refresh-head{
+  border:0!important;
+}
+.reference-layout-refresh .reference-products-viewport,
+.reference-layout-refresh .reference-products-viewport .reference-used-products-grid,
+.reference-layout-refresh .reference-products-viewport .reference-used-product,
+.reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible{
+  border-top:0!important;
+  border-bottom:0!important;
+}
+.reference-layout-refresh .reference-refresh-controls{
+  align-self:center!important;
+  transform:translateY(-24px)!important;
+}
+.reference-layout-refresh .reference-refresh-controls button,
+.reference-layout-refresh .reference-products-viewport .reference-used-product-link{
+  display:grid!important;
+  place-items:center!important;
+  width:44px!important;
+  height:44px!important;
+  border:1px solid rgba(42,35,30,.2)!important;
+  border-radius:50%!important;
+  background:rgba(250,247,244,.92)!important;
+  color:var(--ink,#211d1a)!important;
+  box-shadow:0 5px 16px rgba(24,20,17,.12)!important;
+  font-size:0!important;
+  line-height:0!important;
+  transition:background .2s,color .2s,border-color .2s,transform .2s!important;
+}
+.reference-layout-refresh .reference-refresh-controls button:hover:not(:disabled),
+.reference-layout-refresh .reference-products-viewport .reference-used-product:hover .reference-used-product-link{
+  background:var(--ink,#211d1a)!important;
+  border-color:var(--ink,#211d1a)!important;
+  color:#fff!important;
+}
+.reference-layout-refresh .reference-refresh-controls button::before,
+.reference-layout-refresh .reference-refresh-controls button::after,
+.reference-layout-refresh .reference-products-viewport .reference-used-product-link::before,
+.reference-layout-refresh .reference-products-viewport .reference-used-product-link::after{
+  display:none!important;
+  content:none!important;
+}
+.reference-layout-refresh .has-modern-chevron svg{
+  display:block!important;
+  width:18px!important;
+  height:18px!important;
+  margin:0!important;
+  fill:none!important;
+  stroke:currentColor!important;
+  stroke-width:1.8!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+  pointer-events:none!important;
+}
+
+/* Catalogue archive: search catalogues, brands and categories in place. */
+.catalogue-archive .catalogue-search{
+  position:relative;
+  display:grid;
+  grid-template-columns:22px minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  min-height:58px;
+  margin:0 0 28px;
+  padding:0 17px;
+  border:1px solid rgba(42,35,30,.24);
+  border-radius:999px;
+  background:rgba(255,255,255,.34);
+  color:var(--ink,#211d1a);
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.catalogue-archive .catalogue-search:focus-within{
+  border-color:rgba(42,35,30,.58);
+  background:rgba(255,255,255,.58);
+  box-shadow:0 0 0 3px rgba(42,35,30,.07);
+}
+.catalogue-archive .catalogue-search>svg{
+  width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.72;
+}
+.catalogue-archive .catalogue-search-label{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+.catalogue-archive .catalogue-search input{
+  width:100%;min-width:0;padding:0;border:0;outline:0;background:transparent;
+  color:inherit;font:inherit;font-size:16px;line-height:1.3;
+}
+.catalogue-archive .catalogue-search input::placeholder{color:rgba(42,35,30,.58)}
+.catalogue-archive .catalogue-search input::-webkit-search-cancel-button,
+.catalogue-archive .catalogue-search input::-webkit-search-decoration{
+  display:none!important;
+  -webkit-appearance:none!important;
+  appearance:none!important;
+}
+.catalogue-archive .catalogue-search button{
+  display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;border-radius:50%;
+  background:rgba(42,35,30,.08);color:inherit;font-size:21px;line-height:1;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .18s,background .18s;
+}
+.catalogue-archive .catalogue-search.has-value button{opacity:1;pointer-events:auto}
+.catalogue-archive .catalogue-search button:hover{background:rgba(42,35,30,.15)}
+
+@media(max-width:560px){
+  .product-detail-enhanced .detail-actions,
+  .reference-layout-refresh .detail-actions,
+  .detail-section.reference-detail-enhanced:not(.product-detail-enhanced) .detail-actions{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    align-items:stretch!important;
+    gap:8px!important;
+  }
+  .product-detail-enhanced .detail-actions a,
+  .reference-layout-refresh .detail-actions a,
+  .detail-section.reference-detail-enhanced:not(.product-detail-enhanced) .detail-actions a{
+    width:100%!important;
+    min-width:0!important;
+    min-height:46px!important;
+    padding:9px 7px!important;
+    font-size:10px!important;
+    line-height:1.25!important;
+    text-align:center!important;
+    white-space:normal!important;
+  }
+  .detail-section.reference-detail-enhanced:not(.product-detail-enhanced) .detail-actions a:first-child::before{
+    font-size:10px!important;
+  }
+  .reference-layout-refresh .reference-refresh-controls{
+    transform:translateY(-18px)!important;
+  }
+  .reference-layout-refresh .reference-refresh-controls button,
+  .reference-layout-refresh .reference-products-viewport .reference-used-product-link{
+    width:36px!important;
+    height:36px!important;
+  }
+  .reference-layout-refresh .has-modern-chevron svg{width:16px!important;height:16px!important}
+  .catalogue-archive .catalogue-search{
+    min-height:52px;margin-bottom:22px;padding:0 14px;gap:10px;
+  }
+  .catalogue-archive .catalogue-search input{font-size:14px}
+}
+
+/* Unified detail gallery: touch devices open the active, source-matched image
+   in a full-screen viewer; desktop keeps the existing hover lens. */
+body.detail-gallery-lightbox-open{overflow:hidden!important}
+.detail-gallery-lightbox{
+  position:fixed;inset:0;z-index:2147483646;display:flex;align-items:center;justify-content:center;
+  width:100%;height:100dvh;padding:clamp(18px,4vw,48px);background:rgba(20,17,15,.96);
+  opacity:1;visibility:visible;overscroll-behavior:contain;touch-action:pan-y;
+}
+.detail-gallery-lightbox img{
+  display:block;max-width:min(1180px,calc(100vw - 36px));max-height:calc(100dvh - 36px);
+  width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-drag:none;
+}
+.detail-gallery-lightbox-close,.detail-gallery-lightbox-nav{
+  position:absolute;z-index:2;display:grid;place-items:center;border:1px solid rgba(255,255,255,.58);
+  border-radius:50%;background:rgba(20,17,15,.72);color:#fff;cursor:pointer;line-height:1;
+}
+.detail-gallery-lightbox-close{top:18px;right:18px;width:46px;height:46px;font-size:32px;font-weight:300}
+.detail-gallery-lightbox-nav{top:50%;width:48px;height:48px;font-size:35px;transform:translateY(-50%)}
+.detail-gallery-lightbox-nav.is-prev{left:18px}.detail-gallery-lightbox-nav.is-next{right:18px}
+.detail-gallery-lightbox button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* Reference detail desktop lens: keep the preview fully inside the viewport.
+   The legacy 115% width pushed it beyond the left edge on wide galleries. */
+@media(min-width:851px) and (hover:hover){
+  .reference-detail-enhanced .product-gallery-zoom{
+    left:auto!important;right:calc(100% + 38px)!important;top:64px!important;
+    width:min(42vw,720px)!important;height:min(58vh,520px)!important;
+    max-width:calc(100vw - 80px)!important;
+    background-size:260% 260%!important;
+    border-radius:12px!important;overflow:hidden!important;
+  }
+}
+@media(max-width:850px),(hover:none){
+  .product-gallery-stage{cursor:zoom-in!important}
+  .detail-gallery-lightbox{padding:12px}
+  .detail-gallery-lightbox img{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+  .detail-gallery-lightbox-close{top:12px;right:12px}
+  .detail-gallery-lightbox-nav{width:42px;height:42px;font-size:30px}
+  .detail-gallery-lightbox-nav.is-prev{left:10px}.detail-gallery-lightbox-nav.is-next{right:10px}
+}
+html body .product-inquiry-modal.is-open .product-inquiry-panel h2{font-size:36px!important;line-height:1.04!important;margin:5px 0 8px!important}
+html body .product-inquiry-modal.is-open .project-inquiry-intro{font-size:12px!important;line-height:1.4!important;margin:0 0 10px!important}
+html body .product-inquiry-modal.is-open .product-inquiry-form{display:grid!important;gap:7px!important;align-content:start!important}
+html body .product-inquiry-modal.is-open .product-inquiry-form label{gap:4px!important;font-size:10px!important;line-height:1.25!important}
+html body .product-inquiry-modal.is-open .product-inquiry-form input:not([type=checkbox]){height:42px!important;min-height:42px!important;padding:9px 12px!important}
+html body .product-inquiry-modal.is-open .product-inquiry-form textarea{height:78px!important;min-height:78px!important;padding:9px 12px!important}
+html body .product-inquiry-modal.is-open .form-consent-box{min-height:46px!important;margin:3px 0!important;padding:9px 11px!important}
+html body .product-inquiry-modal.is-open .form-consent-box{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;align-items:center!important;column-gap:9px!important}
+html body .product-inquiry-modal.is-open .form-consent-box input[type=checkbox]{align-self:center!important;margin:0!important}
+html body .product-inquiry-modal.is-open .form-consent-box span{align-self:center!important;font-size:9px!important;line-height:1.35!important;white-space:normal!important}
+html body .product-inquiry-modal.is-open .project-inquiry-submit{min-height:44px!important;margin:5px 0 0!important;padding:11px 22px!important}
+@media(max-height:820px){
+  html body .product-inquiry-modal.is-open .product-inquiry-panel.product-inquiry-panel{padding:18px 26px 22px!important}
+  html body .product-inquiry-modal.is-open .product-inquiry-panel h2{font-size:31px!important}
+  html body .product-inquiry-modal.is-open .product-inquiry-form input:not([type=checkbox]){height:38px!important;min-height:38px!important}
+  html body .product-inquiry-modal.is-open .product-inquiry-form textarea{height:62px!important;min-height:62px!important}
+  html body .product-inquiry-modal.is-open .form-consent-box{min-height:42px!important}
+  html body .product-inquiry-modal.is-open .project-inquiry-submit{min-height:40px!important}
+}
+
+/* Mobile navigation: top fixed header + accessible hamburger drawer. */
+.mobile-menu-toggle{display:none}
+.mobile-navigation-drawer{display:none}
+.references-index-section .reference-card{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 420px;
+  contain:layout paint style;
+}
+@media(max-width:560px){
+  :root{--mobile-nav-height:0px!important;--mobile-header-height:66px}
+  body{padding-bottom:0!important}
+  html:has(body.mobile-menu-page-open){height:100%!important;overflow:hidden!important;overscroll-behavior:none!important}
+  body.mobile-menu-page-open{
+    position:fixed!important;inset:0!important;width:100%!important;height:100dvh!important;
+    overflow:hidden!important;overscroll-behavior:none!important;touch-action:auto!important;
+  }
+  .header{
+    position:fixed!important;inset:0 0 auto 0!important;z-index:120!important;
+    height:var(--mobile-header-height)!important;
+    overflow:visible!important;isolation:isolate!important;
+    display:grid!important;grid-template-columns:64px minmax(0,1fr) auto auto!important;
+    align-items:center!important;column-gap:8px!important;padding:0 14px 0 16px!important;
+    background:linear-gradient(180deg,rgba(18,16,15,.9),rgba(18,16,15,.72))!important;
+    box-shadow:0 8px 24px rgba(0,0,0,.12)!important;backdrop-filter:blur(10px)!important;
+  }
+  .header .logo{grid-column:1!important;position:relative!important;z-index:2!important}
+  .header .language-menu.language-switch-inline{
+    grid-column:3!important;position:static!important;top:auto!important;right:auto!important;
+    justify-self:end!important;gap:4px!important;z-index:2!important;
+  }
+  .header .language-menu button{width:31px!important;height:31px!important;min-height:31px!important;padding:6px!important}
+  .mobile-menu-toggle{
+    grid-column:4;display:inline-flex!important;flex-direction:column;align-items:center;justify-content:center;
+    width:40px;height:40px;padding:0;border:1px solid rgba(255,255,255,.32);border-radius:50%;
+    background:rgba(17,17,17,.28);color:#fff;cursor:pointer;z-index:2;
+  }
+  .mobile-menu-toggle span{display:block;width:17px;height:1.5px;margin:2px 0;background:currentColor;border-radius:3px;transition:transform .2s ease,opacity .2s ease}
+  .header.mobile-menu-open .mobile-menu-toggle span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+  .header.mobile-menu-open .mobile-menu-toggle span:nth-child(2){opacity:0}
+  .header.mobile-menu-open .mobile-menu-toggle span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+  .header nav{
+    position:fixed!important;left:12px!important;right:12px!important;top:calc(var(--mobile-header-height) + 8px)!important;bottom:auto!important;
+    z-index:1000!important;width:auto!important;height:auto!important;max-height:calc(100dvh - 86px)!important;
+    display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;
+    gap:3px!important;overflow-y:auto!important;overflow-x:hidden!important;
+    padding:12px!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:14px!important;
+    background:rgba(20,19,18,.98)!important;box-shadow:0 18px 45px rgba(0,0,0,.3)!important;
+    opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+    transform:translateY(-10px) scale(.985)!important;transform-origin:top right!important;
+    transition:opacity .18s ease,transform .18s ease,visibility .18s ease!important;
+  }
+  .header.mobile-menu-open nav{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important}
+  body.mobile-menu-page-open .header{overflow:visible!important}
+  body.mobile-menu-page-open .header{
+    z-index:2147483001!important;background:var(--paper,#e7ddd6)!important;
+    box-shadow:none!important;backdrop-filter:none!important;border:0!important;
+  }
+  body.mobile-menu-page-open .header .logo img{filter:brightness(0) saturate(100%)!important}
+  body.mobile-menu-page-open .header .mobile-menu-toggle{
+    color:var(--ink,#211d1a)!important;border-color:var(--line,#b9aaa0)!important;background:transparent!important;
+  }
+  body.mobile-menu-page-open .header .language-menu button{border-color:var(--line,#b9aaa0)!important;background:transparent!important}
+  body.mobile-menu-page-open .header nav{
+    display:flex!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+    transform:none!important;clip:auto!important;clip-path:none!important;
+  }
+  .header nav a,.header nav a:last-child{
+    flex:0 0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;
+    width:100%!important;min-height:44px!important;padding:11px 14px!important;border:0!important;border-radius:9px!important;
+    color:#fff!important;font-size:14px!important;line-height:1.25!important;text-align:left!important;white-space:normal!important;
+  }
+  .header nav a.active{background:rgba(255,255,255,.11)!important;color:#fff!important}
+  .header nav a:hover,.header nav a:focus-visible{background:rgba(255,255,255,.08)!important;outline:none!important}
+  .footer{padding-bottom:34px!important}
+  #mobile-navigation-drawer.mobile-navigation-drawer{
+    position:fixed!important;left:0!important;right:0!important;top:0!important;bottom:0!important;
+    z-index:2147483000!important;width:100%!important;height:100dvh!important;max-height:none!important;
+    display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;
+    gap:0!important;overflow:hidden!important;overscroll-behavior:none!important;
+    padding:calc(var(--mobile-header-height) + 24px) 24px 24px!important;border:0!important;border-radius:0!important;
+    background:var(--paper,#e7ddd6)!important;box-shadow:none!important;
+    opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+    transform:none!important;transform-origin:right center!important;
+    transition:none!important;
+  }
+  body.mobile-menu-page-open #mobile-navigation-drawer.mobile-navigation-drawer{
+    opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important;
+  }
+  #mobile-navigation-drawer a{
+    flex:0 0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;
+    width:100%!important;min-height:clamp(50px,9dvh,62px)!important;padding:10px 2px!important;border:0!important;border-radius:0!important;
+    color:var(--ink,#211d1a)!important;font-size:clamp(20px,6vw,23px)!important;font-weight:600!important;line-height:1.2!important;text-decoration:none!important;
+    text-align:left!important;white-space:normal!important;touch-action:manipulation!important;
+  }
+  #mobile-navigation-drawer a:hover,#mobile-navigation-drawer a:focus-visible{background:rgba(31,27,25,.055)!important;outline:none!important}
+  #mobile-navigation-drawer a span{font-size:30px!important;font-weight:300!important;line-height:1!important;opacity:.65}
+  /* The dedicated full-screen drawer replaces the legacy header nav completely. */
+  .header nav{
+    display:none!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+    border:0!important;box-shadow:none!important;transition:none!important;
+  }
+  .header.mobile-menu-open nav{display:none!important}
+  .mobile-menu-toggle,.mobile-menu-toggle span{transition:none!important}
+
+  /* Home brand discovery: logos only, with navigation on both sides. */
+  .brands-carousel .brands-story-image{display:none!important}
+  .brands-carousel .brands-story{display:block!important;margin-bottom:20px!important}
+  .brands-carousel .brands-carousel-bar:empty{display:none!important}
+  .brands-carousel .brands-carousel-window{
+    position:relative!important;margin:18px 26px 0!important;border-top:0!important;
+    overflow:visible!important;padding:0!important;background:#d8cfc8!important;
+  }
+  .brands-carousel .brands-carousel-track{
+    position:relative!important;z-index:1!important;overflow-x:auto!important;overflow-y:hidden!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions{
+    position:absolute!important;top:0!important;right:-38px!important;bottom:0!important;left:-38px!important;z-index:3!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    gap:0!important;pointer-events:none!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions button{
+    width:32px!important;height:32px!important;flex:0 0 32px!important;
+    border-color:rgba(33,29,26,.38)!important;background:var(--paper,#e7ddd6)!important;
+    color:var(--ink,#211d1a)!important;pointer-events:auto!important;
+  }
+  .brands-carousel .brand-logo-card{
+    flex:0 0 50%!important;
+    min-width:0!important;
+    overflow:hidden!important;
+    border-right:1px solid #bfb3aa!important;
+  }
+
+  /* Product categories stay on one touch-scrollable row on mobile. */
+  .product-index-section .filters{
+    display:flex!important;flex-wrap:nowrap!important;justify-content:flex-start!important;
+    width:calc(100% + 36px)!important;margin-left:-18px!important;margin-right:-18px!important;
+    gap:28px!important;overflow-x:auto!important;overflow-y:hidden!important;
+    padding:0 18px 8px!important;scrollbar-width:none!important;-ms-overflow-style:none!important;
+    scroll-snap-type:x proximity!important;overscroll-behavior-x:contain!important;
+    touch-action:pan-x!important;-webkit-overflow-scrolling:touch!important;
+  }
+  .product-index-section .filters::-webkit-scrollbar{display:none!important}
+  .product-index-section .filters button{
+    flex:0 0 auto!important;white-space:nowrap!important;scroll-snap-align:start!important;
+    margin:0!important;padding:8px 0!important;
+  }
+}
+
+/* Final mobile sizing override (kept after the legacy mobile navigation rules). */
+@media(max-width:560px){
+  :root{--mobile-header-height:86px!important}
+  #app>.hero>.header{
+    height:var(--mobile-header-height)!important;
+    grid-template-columns:88px minmax(0,1fr) auto auto!important;
+    padding:0 13px!important;column-gap:7px!important;
+  }
+  #app>.hero>.header .logo,#app>.hero>.header .logo img{width:80px!important;height:68px!important}
+  #app>.hero>.header .language-menu.language-switch-inline{gap:5px!important}
+  #app>.hero>.header .language-menu button{width:38px!important;height:38px!important;min-height:38px!important;padding:7px!important}
+  #app>.hero>.header .language-menu svg{width:22px!important;height:15px!important}
+  #app>.hero>.header .mobile-menu-toggle{width:46px!important;height:46px!important}
+  #app>.hero>.header .mobile-menu-toggle span{width:20px!important}
+}
+
+/* =====================================================================
+   BLOG
+   1) Blog listesi: her yazı kartı bir kutu içinde
+   2) Tablet blog detayı: "Bize Ulaşın" ve "Son Yazılar" eşit çerçeve, altta boşluk yok
+   ===================================================================== */
+
+/* 1) Blog listesi kartları */
+.blog-index .blog-grid>article.blog-card{
+  display:flex;flex-direction:column;overflow:hidden;
+  border:1px solid rgba(128,111,100,.28);border-radius:12px;
+  background:rgba(255,255,255,.25);
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.blog-index .blog-grid>article.blog-card:hover{
+  border-color:rgba(128,111,100,.5);box-shadow:0 12px 30px rgba(33,29,26,.08);
+}
+.blog-index .blog-card .blog-card-copy{
+  display:flex;flex-direction:column;flex:1 1 auto;padding:24px 26px 26px!important;
+}
+.blog-index .blog-card .blog-card-copy>p:not(.blog-meta){margin-bottom:22px}
+.blog-index .blog-card .blog-read{margin-top:auto!important;align-self:flex-start}
+@media(max-width:700px){
+  .blog-index .blog-card .blog-card-copy{padding:20px 20px 22px!important}
+}
+
+/* Blog "Bize Ulaşın" formundaki onay kutusu: metin sarılsın, panel genişlemesin */
+.blog-detail .blog-sidebar .blog-contact-form .form-consent-box{min-width:0;box-sizing:border-box}
+.blog-detail .blog-sidebar .blog-contact-form .form-consent-box span{
+  white-space:normal!important;min-width:0;overflow-wrap:break-word;
+}
+
+/* 2) Tablet: iki eşit çerçeve, içerik çerçeveyi tamamen doldurur
+      (sayfadaki sonraki <style> blokları ezmesin diye seçiciler .blog-detail ile güçlendirildi) */
+@media(min-width:651px) and (max-width:1000px){
+  .blog-detail .blog-sidebar{align-items:stretch}
+  .blog-detail .blog-sidebar>div.blog-contact-panel,
+  .blog-detail .blog-sidebar>div.blog-latest-panel{
+    display:flex;flex-direction:column;box-sizing:border-box;padding:24px 24px 26px;
+  }
+
+  /* Bize Ulaşın: yazılar ve alanlar biraz küçük */
+  .blog-detail .blog-sidebar .blog-contact-panel>.kicker,
+  .blog-detail .blog-sidebar .blog-latest-panel>.kicker{margin:0 0 14px}
+  .blog-detail .blog-sidebar .blog-contact-form{flex:1 1 auto;display:flex;flex-direction:column;gap:9px}
+  .blog-detail .blog-sidebar .blog-contact-form label{gap:5px;font-size:9px}
+  .blog-detail .blog-sidebar .blog-contact-form input,
+  .blog-detail .blog-sidebar .blog-contact-form textarea{padding:7px 10px;font-size:11px;line-height:1.35}
+  .blog-detail .blog-sidebar .blog-contact-form label:has(textarea){flex:1 1 auto;display:flex;flex-direction:column}
+  .blog-detail .blog-sidebar .blog-contact-form textarea{flex:1 1 0;min-height:60px;height:auto;resize:none}
+  .blog-detail .blog-sidebar .blog-contact-form button{align-self:flex-start;padding:8px 18px;font-size:11px}
+  /* Onay kutusu (tablette dar kutuya sığsın diye biraz küçük) */
+  .blog-detail .blog-sidebar .blog-contact-form .form-consent-box{
+    flex:0 0 auto;margin:0!important;padding:9px 11px!important;gap:9px!important;font-size:10px!important;line-height:1.45!important;
+  }
+  .blog-detail .blog-sidebar .blog-contact-form .form-consent-box input[type="checkbox"]{width:14px!important;height:14px!important}
+
+  /* Son Yazılar: görsel ve yazılar biraz büyük, satırlar çerçeveyi eşit paylaşır */
+  .blog-detail .blog-sidebar .blog-latest-panel>.blog-side-post{
+    flex:1 1 auto;gap:16px;padding:14px 0!important;
+  }
+  .blog-detail .blog-sidebar .blog-side-post img{
+    width:clamp(88px,14vw,120px);height:auto;aspect-ratio:4/3;flex:0 0 clamp(88px,14vw,120px);
+  }
+  .blog-detail .blog-sidebar .blog-side-copy{gap:8px!important}
+  .blog-detail .blog-sidebar .blog-side-copy small{font-size:10.5px}
+  .blog-detail .blog-sidebar .blog-side-copy strong{font-size:clamp(14px,1.9vw,16px);line-height:1.35}
+}
+
+/* =====================================================================
+   HAKKIMIZDA (mobil): "Seçkin Tasarımın İzinde" bölümü
+   - maddeler arasındaki çizgiler kaldırıldı, boşluklar azaltıldı
+   - bölümün altındaki büyük görsel mobilde gizlendi
+   ===================================================================== */
+@media(max-width:560px){
+  .dark.values.section{padding-bottom:34px!important}
+  .dark.values.section .three{gap:20px!important;margin:24px 0 0!important}
+  .dark.values.section .three>article{border-top:0!important;padding-top:0!important}
+  .dark.values.section .three b{display:block;line-height:1;margin:0 0 8px}
+  .dark.values.section .three h3{margin:0!important}
+  .dark.values.section .three p{margin:8px 0 0!important}
+  .dark.values.section>.wide-image{display:none!important}
+}
+
+/* Hakkımızda değerleri: dekoratif ikonlar kaldırılır; ikonların kapladığı
+   boşluk tablet ve mobilde geri alınır. */
+body:has(.about-process) .dark.values.section .three>article>b{
+  display:none!important;
+}
+@media(min-width:561px) and (max-width:1100px){
+  body:has(.about-process) .dark.values.section .three>article{
+    padding-top:12px!important;
+  }
+}
+@media(max-width:560px){
+  body:has(.about-process) #app>.hero+.split.intro+.dark.values.section{
+    padding-top:70px!important;
+    padding-bottom:72px!important;
+  }
+  body:has(.about-process) .dark.values.section>h2,
+  body:has(.about-process) .dark.values.section .three h3{
+    text-align:center!important;
+  }
+  body:has(.about-process) .dark.values.section .three{
+    margin-top:52px!important;
+    gap:56px!important;
+  }
+  body:has(.about-process) .dark.values.section .three>article{
+    padding-top:0!important;
+  }
+  body:has(.about-process) .dark.values.section .three>article:nth-child(2)>p{
+    max-width:none!important;
+    white-space:normal!important;
+    font-size:14px!important;
+    letter-spacing:normal!important;
+    line-height:1.45!important;
+    transform:none!important;
+    width:auto!important;
+    margin-left:0!important;
+  }
+  body:has(.about-process) .cta h2{
+    white-space:nowrap!important;
+    font-size:21.4px!important;
+    letter-spacing:.008em!important;
+    word-spacing:.08em!important;
+    line-height:1.15!important;
+  }
+}
+
+/* Mobile brand heading stays compact and on one line. */
+@media(max-width:560px){
+  html body #app .brands-carousel .brands-story-copy h2{
+    font-size:clamp(20px,6.15vw,24px)!important;
+    line-height:1.15!important;
+    letter-spacing:-.035em!important;
+    white-space:nowrap!important;
+  }
+}
+
+/* Absolute final mobile brand-arrow visibility and side placement. */
+@media(max-width:560px){
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions{
+    top:0!important;right:-38px!important;bottom:0!important;left:-38px!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    visibility:visible!important;opacity:1!important;z-index:99!important;
+    gap:0!important;pointer-events:none!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions button{
+    display:grid!important;place-items:center!important;
+    width:32px!important;height:32px!important;flex:0 0 32px!important;
+    visibility:visible!important;opacity:1!important;
+    background:#e7ddd6!important;border:1px solid rgba(33,29,26,.5)!important;
+    color:#211d1a!important;pointer-events:auto!important;
+  }
+  .brands-carousel .brands-carousel-window>.brands-carousel-actions button svg{
+    display:block!important;visibility:visible!important;opacity:1!important;stroke:currentColor!important;
+  }
+}
+
+/* Absolute final contact order. */
+body:has(.contact) .contact-details-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-areas:"address address" "email phone"!important;
+}
+body:has(.contact) .contact-details-grid [data-contact-kind="hours"]{
+  display:none!important;
+}
+html body:has(.contact) #app .contact.section>div:first-child .contact-details-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-areas:"address address" "email phone"!important;
+}
+html body:has(.contact) #app .contact.section>div:first-child .contact-details-grid>[data-contact-kind="hours"]{
+  display:none!important;
+}
+
+/* Desktop contact forms: reduce the outer panel and keep both form tabs
+   proportionally compact. Tablet and mobile retain their existing layout. */
+@media(min-width:1101px){
+  html body:has(.contact) #app .contact.section{
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+    gap:24px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area{
+    width:min(92%,880px)!important;
+    max-width:880px!important;
+    min-height:0!important;
+    justify-self:center!important;
+    padding:22px 24px 24px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area>.contact-form-tabs{
+    margin-bottom:18px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area>.contact-form-tabs button{
+    padding:9px 10px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area>.contact-form-tabs button span{
+    font-size:18px!important;
+    line-height:1.15!important;
+    margin-bottom:4px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area>.contact-form-tabs button small{
+    font-size:9px!important;
+    line-height:1.35!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form{
+    gap:10px!important;
+    row-gap:10px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form .form-grid{
+    column-gap:18px!important;
+    row-gap:11px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .form-panel-intro{
+    margin:0 0 4px!important;
+    font-size:11px!important;
+    line-height:1.4!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form label{
+    gap:4px!important;
+    font-size:10.5px!important;
+    line-height:1.3!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form input,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form select{
+    min-height:36px!important;
+    height:36px!important;
+    padding:7px 10px!important;
+    font-size:12px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form textarea{
+    min-height:78px!important;
+    height:78px!important;
+    padding:8px 10px!important;
+    font-size:12px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form>.form-consent-box{
+    min-height:46px!important;
+    margin:2px 0!important;
+    padding:9px 12px!important;
+    gap:9px!important;
+    font-size:10.5px!important;
+    line-height:1.4!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form button[type="submit"]{
+    padding:9px 20px!important;
+    font-size:11px!important;
+  }
+}
+
+/* Contact form readability: keep the compact panel, but restore comfortable
+   text sizes inside both the general and professional forms. */
+@media(min-width:1101px){
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form,
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form .form-grid,
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form .form-panel-intro,
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form .form-grid>label{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .professional-form{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .form-panel-intro{
+    font-size:14px!important;
+    line-height:1.5!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form label{
+    font-size:13px!important;
+    line-height:1.4!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form input,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form select,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form textarea{
+    font-size:14px!important;
+    line-height:1.4!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form>.form-consent-box,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form>.form-consent-box span{
+    font-size:12px!important;
+    line-height:1.5!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form button[type="submit"]{
+    font-size:12px!important;
+  }
+}
+
+@media(max-width:560px){
+  /* Remove the stray page-link strip (the visible "Ürünler" label) while
+     keeping the logo, language controls and menu button in the header. */
+  html body:has(.contact) #app .header nav{
+    display:none!important;
+  }
+  html body:has(.contact) #app .contact-form-area .form-panel-intro{
+    font-size:13px!important;
+    line-height:1.5!important;
+  }
+  html body:has(.contact) #app .contact-form-area .contact-form label{
+    font-size:12px!important;
+    line-height:1.4!important;
+  }
+  html body:has(.contact) #app .contact-form-area .contact-form input,
+  html body:has(.contact) #app .contact-form-area .contact-form select,
+  html body:has(.contact) #app .contact-form-area .contact-form textarea{
+    font-size:14px!important;
+    line-height:1.45!important;
+  }
+  html body:has(.contact) #app .contact-form-area .contact-form>.form-consent-box,
+  html body:has(.contact) #app .contact-form-area .contact-form>.form-consent-box span{
+    font-size:12px!important;
+    line-height:1.5!important;
+  }
+  html body:has(.contact) #app .contact-form-area .contact-form button[type="submit"]{
+    font-size:13px!important;
+  }
+}
+
+/* The contact page has no mobile bottom navigation. Remove the global
+   navigation reserve so the footer ends flush with the page. */
+@media(max-width:560px){
+  html body:has(.contact){
+    padding-bottom:0!important;
+  }
+  html body:has(.contact) #app,
+  html body:has(.contact) #app>.footer{
+    margin-bottom:0!important;
+  }
+}
+
+/* Final contact-form typography: keep labels, helper copy and entered values
+   comfortably readable at desktop and tablet widths. The panel grows with
+   its content instead of compressing the text. */
+html body:has(.contact) #app .contact.section>.contact-form-area{
+  height:auto!important;
+  min-height:0!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form-tabs button span{
+  font-size:22px!important;
+  line-height:1.2!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form-tabs button small{
+  font-size:12px!important;
+  line-height:1.45!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .form-panel-intro{
+  font-size:15px!important;
+  line-height:1.55!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form label{
+  font-size:14px!important;
+  line-height:1.45!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form input,
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form select,
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form textarea{
+  font-size:15px!important;
+  line-height:1.45!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form>.form-consent-box,
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form>.form-consent-box span{
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+html body:has(.contact) #app .contact.section>.contact-form-area .contact-form button[type="submit"]{
+  font-size:13px!important;
+}
+
+@media(max-width:560px){
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form-tabs button span{
+    font-size:21px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form-tabs button small{
+    font-size:11px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .form-panel-intro{
+    font-size:14px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form label{
+    font-size:13px!important;
+  }
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form input,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form select,
+  html body:has(.contact) #app .contact.section>.contact-form-area .contact-form textarea{
+    font-size:15px!important;
+  }
+}
+/* Ana sayfadaki işaretli CTA'lar: gerçek, okunaklı metin ve ortak ölçü */
+html body #app#app#app .split.intro > div > a,
+html body #app#app#app .section-head > a,
+html body #app#app#app .split.showroom > div > a,
+html body #app#app#app .brands-discover {
+  min-height: 46px !important;
+  padding: 13px 22px !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .025em !important;
+  font-weight: 600 !important;
+}
+
+html body #app#app#app .split.intro > div > a::after,
+html body #app#app#app .section-head > a::after,
+html body #app#app#app .split.showroom > div > a::after {
+  content: none !important;
+  display: none !important;
+}
+
+html body #app#app#app .category-grid .image-card > div > span,
+html body #app#app#app .products-grid .product-card > div > span,
+html body #app#app#app .reference-card > div > span {
+  min-height: 38px !important;
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+  line-height: 1.15 !important;
+  letter-spacing: .025em !important;
+  font-weight: 600 !important;
+}
+
+html body #app#app#app .category-grid .image-card > div > span::after,
+html body #app#app#app .products-grid .product-card > div > span::after,
+html body #app#app#app .reference-card > div > span::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .split.intro > div > a,
+  html body #app#app#app .section-head > a,
+  html body #app#app#app .split.showroom > div > a,
+  html body #app#app#app .brands-discover {
+    min-height: 42px !important;
+    padding: 11px 18px !important;
+    font-size: 14px !important;
+  }
+
+  html body #app#app#app .category-grid .image-card > div > span,
+  html body #app#app#app .products-grid .product-card > div > span,
+  html body #app#app#app .reference-card > div > span {
+    min-height: 34px !important;
+    padding: 8px 13px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* 1024px kesin çakışma düzeltmesi ve istenen 13px form açıklaması. */
+html body:has(.contact) #app#app#app section.contact .contact-form-area
+.contact-choice-panel.active[data-contact-panel="professional"]
+form.professional-form > p.form-panel-intro {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+@media (min-width: 851px) and (max-width: 1100px) {
+  html body:has(.contact) #app#app#app section.contact > div:first-child .contact-details-grid {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  html body:has(.contact) #app#app#app section.contact > div:first-child
+  .contact-details-grid > a.contact-detail {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 64px !important;
+    margin: 0 !important;
+    padding: 10px 8px !important;
+    transform: none !important;
+  }
+
+  html body:has(.contact) #app#app#app section.contact > div:first-child
+  .contact-details-grid .contact-icon {
+    grid-column: 1 !important;
+    align-self: center !important;
+  }
+
+  html body:has(.contact) #app#app#app section.contact > div:first-child
+  .contact-details-grid .contact-item-copy {
+    position: static !important;
+    grid-column: 2 !important;
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  html body:has(.contact) #app#app#app section.contact > div:first-child
+  .contact-details-grid .contact-item-copy b,
+  html body:has(.contact) #app#app#app section.contact > div:first-child
+  .contact-details-grid .contact-item-copy span {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  html body #app#app#app > footer.footer {
+    grid-template-columns: 220px 190px 170px 150px !important;
+    justify-content: space-between !important;
+    column-gap: 36px !important;
+  }
+}
+
+
+/* Referans detayı: gizlenmiş dört proje bilgi kartını geri getir. */
+html body #app#app#app .reference-layout-refresh .reference-project-meta {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 9px !important;
+  order: 7 !important;
+  margin: 0 0 22px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div + div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div:last-child {
+  min-width: 0 !important;
+  min-height: 76px !important;
+  padding: 15px 16px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,.48) !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div:nth-child(2),
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div:nth-child(3) {
+  background: rgba(255,255,255,.48) !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta span {
+  margin-bottom: 6px !important;
+  color: #98745b !important;
+  font-size: 9px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta b {
+  color: #302a26 !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 420px) {
+  html body #app#app#app .reference-layout-refresh .reference-project-meta {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Referans ürün seçkisi: kartın tamamı bağlantıdır, ayrı ok simgesini gizle. */
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product {
+  cursor: pointer !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-link {
+  display: none !important;
+}
+
+/* Referans detayı: etiket ve bilgi kartı tipografisini okunaklı hale getir. */
+html body #app#app#app .reference-layout-refresh .reference-editorial-copy > .kicker {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div + div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div:last-child {
+  min-height: 90px !important;
+  padding: 17px 18px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta span {
+  margin-bottom: 7px !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta b {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head .kicker {
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+/* Son öncelik: ürün seçkisi rozeti, başlık aralığı ve kart alt hizası. */
+html body #app#app#app .reference-layout-refresh .reference-used-products-head.is-refresh-head {
+  min-height: 0 !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  min-height: 30px !important;
+  margin: 0 0 8px !important;
+  padding: 7px 12px !important;
+  border: 1px solid rgba(128,111,100,.24) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.34) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+  font-size: 24px !important;
+  line-height: 1.16 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+  height: 178px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+  min-height: 320px !important;
+  padding-bottom: 24px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-top: 12px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand,
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product h3 {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+    font-size: 21px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+    min-height: 268px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+    height: 154px !important;
+  }
+}
+
+/* Ürün kartı görsellerini büyüt ve kart metinlerini sola hizala. */
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+  height: 178px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand,
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product h3 {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+    height: 154px !important;
+  }
+}
+
+/* Ürün seçkisi başlığı, rozet ve kartların son yerleşimi. */
+html body #app#app#app .reference-layout-refresh .reference-used-products-head.is-refresh-head {
+  min-height: 0 !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  min-height: 30px !important;
+  margin: 0 0 8px !important;
+  padding: 7px 12px !important;
+  border: 1px solid rgba(128,111,100,.24) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.34) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+  font-size: 24px !important;
+  line-height: 1.16 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+  min-height: 320px !important;
+  padding-bottom: 24px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  margin-top: 12px !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+    font-size: 21px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+    min-height: 268px !important;
+  }
+}
+
+/* En son öncelik: büyütülmüş ürün görselleri ve sol metin hizası. */
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+  height: 178px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand,
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product h3 {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+    height: 154px !important;
+  }
+}
+
+/* Form üst etiketleri: ortak rozet görünümü ve okunaklı ürün formu metinleri. */
+html body .project-inquiry-modal .project-inquiry-panel > .kicker,
+html body .product-inquiry-modal .product-inquiry-panel > .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  min-height: 32px !important;
+  margin: 0 0 10px !important;
+  padding: 7px 14px !important;
+  border: 1px solid rgba(128,111,100,.26) !important;
+  border-radius: 999px !important;
+  background: rgba(226,215,205,.58) !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .14em !important;
+}
+
+html body .product-inquiry-modal.is-open .project-inquiry-intro {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+html body .product-inquiry-modal.is-open .product-inquiry-form label {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+@media (max-width: 560px) {
+  html body .project-inquiry-modal .project-inquiry-panel > .kicker,
+  html body .product-inquiry-modal .product-inquiry-panel > .kicker {
+    min-height: 29px !important;
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+
+  html body .product-inquiry-modal.is-open .project-inquiry-intro {
+    font-size: 13px !important;
+  }
+
+  html body .product-inquiry-modal.is-open .product-inquiry-form label {
+    font-size: 11px !important;
+  }
+}
+
+/* Ana sayfa Seçili Projeler kartlarındaki konum etiketleri */
+html body #app#app#app .projects .project-grid > a > p {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  letter-spacing: .035em !important;
+  font-weight: 500 !important;
+  margin-top: 5px !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .projects .project-grid > a > p {
+    font-size: 12px !important;
+  }
+}
+
+/* Ürünler sayfası giriş açıklaması: tablet ve masaüstünde tek satır */
+@media (min-width: 851px) {
+  html body #app#app#app .product-index-section > .lead {
+    width: 100% !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Ortak iletişim CTA'sı: gerçek metin, oksuz ve daha okunaklı ölçü */
+html body #app#app#app .cta > div > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: max-content !important;
+  min-height: 46px !important;
+  padding: 13px 22px !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .025em !important;
+  font-weight: 600 !important;
+}
+
+html body #app#app#app .cta > div > a::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .cta > div > a {
+    min-height: 42px !important;
+    padding: 11px 18px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Ürünler sayfası: kompakt Görüntüle etiketleri ve 12px koleksiyon etiketi */
+html body #app#app#app .product-index-section > .kicker {
+  font-size: 12px !important;
+}
+
+html body #app#app#app .product-index-section .products-grid .product-card > div > span {
+  min-height: 32px !important;
+  padding: 7px 13px !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  letter-spacing: .02em !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .product-index-section .products-grid .product-card > div > span {
+    min-height: 30px !important;
+    padding: 6px 12px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Tüm sayfalardaki Görüntüle etiketleri: görünümü koruyan kompakt ölçü */
+html body #app#app#app .category-grid .image-card > div > span,
+html body #app#app#app .products-grid .product-card > div > span,
+html body #app#app#app .reference-grid .reference-card > div > span {
+  min-height: 32px !important;
+  padding: 7px 13px !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  letter-spacing: .02em !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .category-grid .image-card > div > span,
+  html body #app#app#app .products-grid .product-card > div > span,
+  html body #app#app#app .reference-grid .reference-card > div > span {
+    min-height: 30px !important;
+    padding: 6px 12px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Ürün detayı: teknik bilgiler ve benzer ürün butonları daha okunaklı. */
+html body #app#app#app .product-detail-enhanced .product-spec-heading > span {
+  font-size: 13px !important;
+}
+
+html body #app#app#app .product-detail-enhanced .product-spec-heading > small {
+  font-size: 12px !important;
+}
+
+html body #app#app#app .product-detail-enhanced .legacy-detail-specs dt {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+html body #app#app#app .product-detail-enhanced .legacy-detail-specs dd {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+html body #app#app#app .related-products .related-product-card > b {
+  min-height: 32px !important;
+  padding: 8px 14px !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+}
+
+html body #app#app#app .related-products .related-product-card > b::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .related-products .related-product-card > b {
+    min-height: 30px !important;
+    padding: 7px 11px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Ürün teknik tablosu: Montaj / Uygulama etiketi tek satırda kalsın. */
+html body #app#app#app .product-detail-enhanced .legacy-detail-specs > div {
+  grid-template-columns: 165px minmax(0, 1fr) !important;
+}
+
+html body #app#app#app .product-detail-enhanced .legacy-detail-specs > div:nth-child(3) > dt {
+  white-space: nowrap !important;
+}
+
+/* Katalog kartları: Görüntüle butonuyla aynı kompakt ölçü. */
+html body #app#app#app .catalog-grid .catalog-card .catalog-card-label {
+  min-height: 32px !important;
+  padding: 7px 13px !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  letter-spacing: .02em !important;
+}
+
+@media (max-width: 850px) and (min-width: 561px) {
+  html body #app#app#app .product-detail-enhanced .legacy-detail-specs > div {
+    grid-template-columns: 155px minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .product-detail-enhanced .legacy-detail-specs > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body #app#app#app .catalog-grid .catalog-card .catalog-card-label {
+    min-height: 30px !important;
+    padding: 6px 12px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Referanslar sayfası: bölüm etiketi ve proje konumları 12px. */
+html body #app#app#app .references-index-section > .kicker {
+  font-size: 12px !important;
+}
+
+html body #app#app#app .references-index-section .reference-grid .reference-card-copy > p {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+/* Referans detayı: Malzeme & Ürün Seçkisi kartları yatay yerleşim. */
+html body #app#app#app .reference-layout-refresh .reference-used-products.is-refresh-slider {
+  min-height: 0 !important;
+  padding: 20px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head.is-refresh-head {
+  border-bottom: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport {
+  overflow: hidden !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  overflow: hidden !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 238px !important;
+  padding: 10px 10px 24px !important;
+  border: 1px solid rgba(128,111,100,.24) !important;
+  border-radius: 8px !important;
+  background: rgba(255,255,255,.22) !important;
+  transform: scale(1) !important;
+  transform-origin: center !important;
+  transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible:hover {
+    z-index: 2 !important;
+    transform: scale(1.01) !important;
+    background: rgba(255,255,255,.34) !important;
+    box-shadow: 0 7px 18px rgba(55,42,33,.08) !important;
+  }
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+  display: block !important;
+  width: 100% !important;
+  height: 132px !important;
+  margin: 0 0 12px !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand {
+  margin: 0 0 6px !important;
+  font-size: 8px !important;
+  line-height: 1.35 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product h3 {
+  margin: 0 0 12px !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-link {
+  position: static !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin: auto 0 0 !important;
+  align-self: flex-end !important;
+}
+
+@media (max-width: 1180px) {
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-used-products.is-refresh-slider {
+    padding: 16px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-products-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+    min-height: 224px !important;
+  }
+}
+
+/* Son öncelik: referans detayındaki işaretli metin boyutları. */
+html body #app#app#app .reference-layout-refresh .reference-editorial-copy > .kicker {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div + div,
+html body #app#app#app .reference-layout-refresh .reference-project-meta > div:last-child {
+  min-height: 90px !important;
+  padding: 17px 18px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta span {
+  margin-bottom: 7px !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-project-meta b {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head .kicker {
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+/* Nihai öncelik: ürün seçkisi rozeti, aralık ve kart alt hizası. */
+html body #app#app#app .reference-layout-refresh .reference-used-products-head.is-refresh-head {
+  min-height: 0 !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  min-height: 30px !important;
+  margin: 0 0 8px !important;
+  padding: 7px 12px !important;
+  border: 1px solid rgba(128,111,100,.24) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.34) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+  font-size: 24px !important;
+  line-height: 1.16 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+  height: 178px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+  min-height: 320px !important;
+  padding-bottom: 24px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-main {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-top: 12px !important;
+}
+
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product-brand,
+html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product h3 {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh .reference-used-products-head h3 {
+    font-size: 21px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-used-product.is-page-visible {
+    min-height: 268px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh .reference-products-viewport .reference-product-thumb {
+    height: 154px !important;
+  }
+}
+
+/* Nihai öncelik: iki formun rozetleri ve ürün formu metinleri. */
+html body .project-inquiry-modal .project-inquiry-panel > .kicker,
+html body .product-inquiry-modal .product-inquiry-panel > .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  min-height: 32px !important;
+  margin: 0 0 10px !important;
+  padding: 7px 14px !important;
+  border: 1px solid rgba(128,111,100,.26) !important;
+  border-radius: 999px !important;
+  background: rgba(226,215,205,.58) !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .14em !important;
+}
+
+html body .product-inquiry-modal.is-open .project-inquiry-intro {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+html body .product-inquiry-modal.is-open .product-inquiry-form label {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+@media (max-width: 560px) {
+  html body .project-inquiry-modal .project-inquiry-panel > .kicker,
+  html body .product-inquiry-modal .product-inquiry-panel > .kicker {
+    min-height: 29px !important;
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+
+  html body .product-inquiry-modal.is-open .project-inquiry-intro {
+    font-size: 13px !important;
+  }
+
+  html body .product-inquiry-modal.is-open .product-inquiry-form label {
+    font-size: 11px !important;
+  }
+}
+
+/* Profesyoneller sayfası: geniş ekranlarda istenen tek satırlı metin düzeni. */
+@media (min-width: 1200px) {
+  html body #app > .hero:has(+ .pro-intro) .hero-copy {
+    width: min(90vw, 1500px) !important;
+    max-width: none !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy h1 {
+    max-width: none !important;
+    font-size: clamp(46px, 4vw, 64px) !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy > p {
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app .pro-intro {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr) !important;
+    gap: 5vw !important;
+  }
+
+  html body #app .pro-intro > div {
+    max-width: none !important;
+  }
+
+  html body #app .pro-intro > div > p:not(.kicker) {
+    max-width: 820px !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    text-wrap: pretty !important;
+  }
+
+  html body #app .pro-services .section-head h2,
+  html body #app .pro-service-grid h3 {
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app .pro-service-grid h3 {
+    font-size: clamp(21px, 1.55vw, 27px) !important;
+  }
+
+  html body #app .pro-process {
+    grid-template-columns: minmax(300px, .48fr) minmax(0, 1.52fr) !important;
+    gap: 4vw !important;
+  }
+
+  html body #app .pro-process-list p {
+    max-width: none !important;
+    font-size: clamp(13px, 1.05vw, 16px) !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Profesyoneller sayfası: buton, bölüm başlığı ve kartların son hizası. */
+html body #app .pro-intro .pro-share-badge {
+  min-height: 46px !important;
+  padding: 12px 22px !important;
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+}
+
+html body #app .pro-services .section-head {
+  align-items: center !important;
+}
+
+html body #app .pro-services .section-head > p {
+  align-self: center !important;
+  margin: 0 !important;
+}
+
+html body #app .pro-service-grid {
+  align-items: stretch !important;
+}
+
+html body #app .pro-service-grid article {
+  display: flex !important;
+  min-height: 310px !important;
+  height: 100% !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+html body #app .pro-service-grid article > span {
+  display: block !important;
+  min-height: 30px !important;
+}
+
+html body #app .pro-service-grid article > h3 {
+  width: 100% !important;
+  min-height: 38px !important;
+  margin-top: 34px !important;
+  margin-bottom: 17px !important;
+}
+
+html body #app .pro-service-grid article > p {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+html body #app .pro-process > div:first-child > h2 {
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+@media (max-width: 1199px) {
+  html body #app .pro-service-grid article {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html body #app .pro-intro .pro-share-badge {
+    min-height: 42px !important;
+    padding: 10px 18px !important;
+    font-size: 14px !important;
+  }
+
+  html body #app .pro-services .section-head {
+    align-items: flex-start !important;
+  }
+}
+
+/* Süreç başlığı/listesi aralığı ve blog geri dönüş butonunun son ölçüleri. */
+html body #app .pro-process-list {
+  padding-left: clamp(28px, 3vw, 52px) !important;
+}
+
+html body #app .blog-detail .blog-index-return {
+  min-height: 46px !important;
+  padding: 12px 24px !important;
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 850px) {
+  html body #app .pro-process-list {
+    padding-left: 0 !important;
+    margin-top: 34px !important;
+  }
+}
+
+/* 1024px yerleşim düzeltmeleri ve son tipografi ayarları. */
+html body:has(.contact) #app .contact-details-intro {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+html body:has(.contact) #app .contact-choice-panel[data-contact-panel="professional"] .form-panel-intro {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+html body #app .reference-layout-refresh .reference-used-products-head.is-refresh-head {
+  align-items: end !important;
+}
+
+html body #app .reference-layout-refresh .reference-refresh-controls {
+  align-self: end !important;
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 851px) and (max-width: 1100px) {
+  html body:has(.contact) #app .contact-details-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas: "address" "email" "phone" !important;
+    row-gap: 9px !important;
+  }
+
+  html body:has(.contact) #app .contact-details-grid > [data-contact-kind="address"],
+  html body:has(.contact) #app .contact-details-grid > [data-contact-kind="email"],
+  html body:has(.contact) #app .contact-details-grid > [data-contact-kind="phone"] {
+    grid-column: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  html body:has(.contact) #app .contact-details-grid .contact-detail {
+    min-height: 62px !important;
+    padding: 10px 8px !important;
+  }
+
+  html body:has(.contact) #app .contact-details-grid .contact-item-copy span {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  html body #app .detail-section.product-detail-enhanced,
+  html body #app .product-detail-enhanced {
+    width: calc(100% - 56px) !important;
+    max-width: 1040px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  html body #app > .footer {
+    grid-template-columns: minmax(180px, 1.15fr) minmax(170px, 1.05fr) minmax(150px, .95fr) minmax(145px, .85fr) !important;
+    column-gap: 30px !important;
+  }
+
+  html body #app .about-process > p.lead,
+  html body #app .references-index-section > p.lead {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app .split.showroom {
+    grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr) !important;
+    gap: 46px !important;
+  }
+
+  html body #app .split.showroom > div,
+  html body #app .split.showroom > div > p {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 980px) {
+  html body #app > .footer {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr) !important;
+    column-gap: 28px !important;
+  }
+
+  html body #app > .footer > div:first-child {
+    grid-column: 1 / -1 !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* İletişim yardımcı metinleri ve ürün seçkisi oklarının kesin son ayarı. */
+html body:has(.contact) #app .contact-details-intro {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+html body:has(.contact) #app .contact-choice-panel[data-contact-panel="professional"] .form-panel-intro {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+html body #app .reference-layout-refresh .reference-refresh-controls {
+  align-self: end !important;
+  margin-bottom: 0 !important;
+  transform: translateY(-7px) !important;
+}
+
+@media (max-width: 560px) {
+  html body #app .reference-layout-refresh .reference-refresh-controls {
+    transform: translateY(-3px) !important;
+  }
+}
+
+/* Kesin öncelik: profesyonel form açıklaması ve seçki başlığı kontrolleri. */
+html body:has(.contact) #app#app#app section.contact .contact-form-area
+.contact-choice-panel.active[data-contact-panel="professional"]
+form.professional-form > p.form-panel-intro {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+/* 1024px katalog ve profesyoneller sayfasi son yerlesim duzeltmeleri. */
+@media (min-width: 851px) and (max-width: 1100px) {
+  html body #app .catalog-section {
+    width: calc(100% - 112px) !important;
+    max-width: 1088px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy {
+    left: 48px !important;
+    right: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy > p {
+    width: 100% !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    overflow-wrap: normal !important;
+  }
+
+  html body #app .pro-intro {
+    grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr) !important;
+    gap: 42px !important;
+  }
+
+  html body #app .pro-intro > div {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  html body #app .pro-intro > div > p:not(.kicker) {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+html body #app#app#app .reference-layout-refresh
+.reference-used-products-head.is-refresh-head {
+  position: relative !important;
+  display: block !important;
+}
+
+html body #app#app#app .reference-layout-refresh
+.reference-used-products-head.is-refresh-head .reference-refresh-heading {
+  padding-right: 86px !important;
+}
+
+html body #app#app#app .reference-layout-refresh
+.reference-used-products-head.is-refresh-head .reference-refresh-controls {
+  position: absolute !important;
+  top: 34px !important;
+  right: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+@media (max-width: 560px) {
+  html body #app#app#app .reference-layout-refresh
+  .reference-used-products-head.is-refresh-head .reference-refresh-heading {
+    padding-right: 76px !important;
+  }
+
+  html body #app#app#app .reference-layout-refresh
+  .reference-used-products-head.is-refresh-head .reference-refresh-controls {
+    top: 31px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html body #app .blog-detail .blog-index-return {
+    min-height: 42px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Son iletişim ve profesyoneller yerleşim düzeltmeleri. */
+@media (min-width: 851px) {
+  html body #app .pro-process-list {
+    padding-left: clamp(78px, 6vw, 112px) !important;
+  }
+}
+
+html body:has(.contact) #app .contact-details-intro {
+  max-width: none !important;
+}
+
+html body:has(.contact) #app .contact-details-grid .contact-item-copy,
+html body:has(.contact) #app .contact-details-grid .contact-item-copy b,
+html body:has(.contact) #app .contact-details-grid .contact-item-copy span {
+  font-family: Poppins, Arial, sans-serif !important;
+}
+
+html body:has(.contact) #app .contact-details-grid .contact-item-copy b {
+  font-size: 17px !important;
+  line-height: 1.35 !important;
+  letter-spacing: .01em !important;
+}
+
+html body:has(.contact) #app .contact-details-grid .contact-item-copy span {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  letter-spacing: .008em !important;
+}
+
+html body:has(.contact) #app .contact-choice-panel[data-contact-panel="professional"] .form-consent-box {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 62px !important;
+  height: auto !important;
+  overflow: visible !important;
+  align-items: flex-start !important;
+}
+
+html body:has(.contact) #app .contact-choice-panel[data-contact-panel="professional"] .form-consent-box span {
+  display: block !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  overflow-wrap: break-word !important;
+  text-overflow: clip !important;
+}
+
+@media (min-width: 1200px) {
+  html body:has(.contact) #app .contact-details-intro,
+  html body:has(.contact) #app .contact-choice-panel[data-contact-panel="professional"] .form-panel-intro {
+    max-width: none !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+}
+
+@media (max-width: 850px) {
+  html body:has(.contact) #app .contact-details-grid .contact-item-copy b {
+    font-size: 15px !important;
+  }
+
+  html body:has(.contact) #app .contact-details-grid .contact-item-copy span {
+    font-size: 13px !important;
+  }
+}
+
+/* 1024px ana sayfa, katalog ve referans metin genişliği düzeltmeleri. */
+@media (min-width: 851px) and (max-width: 1100px) {
+  html body:has(.brands-carousel) #app .split.intro > div > p:not(.kicker) {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    overflow-wrap: normal !important;
+  }
+
+  html body #app .catalog-section {
+    width: calc(100% - 80px) !important;
+    max-width: 1120px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html body #app .reference-detail-enhanced.reference-layout-refresh {
+    grid-template-columns: minmax(0, 1.05fr) minmax(390px, .95fr) !important;
+    gap: 28px !important;
+  }
+
+  html body #app .reference-detail-enhanced.reference-layout-refresh
+  .reference-editorial-copy > p:not(.kicker) {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+/* 1024px son oncelik: katalog kenarlari ve profesyoneller metin akisi. */
+@media (min-width: 851px) and (max-width: 1100px) {
+  html body #app .catalog-section {
+    width: calc(100% - 112px) !important;
+    max-width: 1088px !important;
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy {
+    left: 48px !important;
+    right: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  html body #app > .hero:has(+ .pro-intro) .hero-copy > p {
+    width: 100% !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    overflow-wrap: normal !important;
+  }
+
+  html body #app .pro-intro {
+    grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr) !important;
+    gap: 42px !important;
+  }
+
+  html body #app .pro-intro > div,
+  html body #app .pro-intro > div > p:not(.kicker) {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  html body #app .pro-intro > div > p:not(.kicker) {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+/* 1024px marka/koleksiyon kartlarini iki yanda esit guvenli alanda tut. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  html body #app .catalog-section {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 52px !important;
+    margin-right: 52px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden !important;
+  }
+
+  html body #app .catalog-section .catalog-grid {
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  html body #app .catalog-section .catalog-grid .catalog-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-column: auto !important;
+  }
+}
+
+/* Ana sayfa marka bolumu: kesfet butonu ve gezinme oklari ayni dikey eksende. */
+@media (min-width: 901px) {
+  html body #app .brands-carousel .brands-carousel-bar {
+    transform: translateY(4px) !important;
+  }
+}
+
+/* Tablet: sayfa giris metinleri mevcut satir genisligini tam kullansin. */
+@media (min-width: 561px) and (max-width: 900px) {
+  html body #app .brands-page-intro > p.lead,
+  html body #app .split.intro > div > p:not(.kicker),
+  html body #app .references-index-section > p.lead {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: justify !important;
+    text-align-last: left !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  /* Uzun proje adlari buton alanina tasmak yerine kendi kolonunda kirilir. */
+  html body #app .references-index-section .reference-grid .reference-card-copy {
+    max-width: calc(100% - 100px) !important;
+  }
+
+  html body #app .references-index-section .reference-grid .reference-card-copy h3 {
+    font-size: 18px !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+}
+
+/* Tablet: referans listeleri, detay metinleri, profesyonel surec ve blog menusu. */
+@media (min-width: 561px) and (max-width: 900px) {
+  html body #app .references-index-section .other-refs {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 38px !important;
+  }
+
+  html body #app .reference-detail-enhanced .reference-editorial-copy > p:not(.kicker),
+  html body #app .reference-detail-enhanced h2 + p,
+  html body #app .pro-process-list p {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: justify !important;
+    text-align-last: left !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+}
+
+/* Blog tablet basligi, diger ic sayfalarla ayni menu olculerini kullanir. */
+@media (min-width: 561px) and (max-width: 1024px) {
+  html body #app > .blog-hero > .header {
+    height: 124px !important;
+    grid-template-columns: 126px minmax(0, 1fr) 110px !important;
+    padding: 0 18px !important;
+    column-gap: 8px !important;
+  }
+
+  html body #app > .blog-hero > .header .logo,
+  html body #app > .blog-hero > .header .logo img {
+    width: 118px !important;
+    height: 99px !important;
+  }
+
+  html body #app > .blog-hero > .header nav {
+    min-width: 0 !important;
+    justify-content: center !important;
+    gap: clamp(7px, 1.15vw, 16px) !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  html body #app > .blog-hero > .header nav a {
+    flex: 0 0 auto !important;
+    font-size: clamp(12px, 1.5vw, 15px) !important;
+    font-weight: 600 !important;
+  }
+
+  html body #app > .blog-hero > .header .language-menu.language-switch-inline {
+    gap: 8px !important;
+  }
+
+  html body #app > .blog-hero > .header .language-menu button {
+    width: 49px !important;
+    height: 49px !important;
+    min-height: 49px !important;
+    padding: 9px !important;
+  }
+
+  html body #app > .blog-hero > .header .language-menu svg {
+    width: 27px !important;
+    height: 18px !important;
+  }
+}
+
+/* Blog ve blog yazisi header'i, diger ic sayfalarla ayni olculeri kullanir. */
+@media (min-width: 1025px) {
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header { height:104px!important;grid-template-columns:168px minmax(0,1fr) 124px!important;padding:0 5vw!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo,
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo img { width:92px!important;height:78px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav { gap:42px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav a { font-size:15px!important;font-weight:600!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu.language-switch-inline { gap:9px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu button { width:45px!important;height:45px!important;min-height:45px!important;padding:8px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu svg { width:25px!important;height:17px!important }
+}
+@media (min-width:561px) and (max-width:1024px) {
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header { height:124px!important;grid-template-columns:126px minmax(0,1fr) 110px!important;padding:0 18px!important;column-gap:8px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo,
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo img { width:118px!important;height:99px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav { min-width:0!important;justify-content:center!important;gap:clamp(7px,1.15vw,16px)!important;overflow:visible!important;white-space:nowrap!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav a { flex:0 0 auto!important;font-size:clamp(12px,1.5vw,15px)!important;font-weight:600!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu.language-switch-inline { gap:8px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu button { width:49px!important;height:49px!important;min-height:49px!important;padding:9px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu svg { width:27px!important;height:18px!important }
+}
+@media (min-width:561px) and (max-width:767px) {
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header { height:auto!important;min-height:0!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:auto auto!important;align-items:center!important;padding:12px 22px 10px!important;row-gap:2px!important;column-gap:12px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo { grid-column:1!important;grid-row:1!important;justify-self:start!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo,
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo img { width:104px!important;height:87px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu.language-switch-inline { grid-column:2!important;grid-row:1!important;justify-self:end!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav { grid-column:1/-1!important;grid-row:2!important;width:100%!important;justify-content:center!important;gap:clamp(10px,2vw,24px)!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header nav a { font-size:clamp(11.5px,2.05vw,14px)!important }
+}
+@media (max-width:560px) {
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header { height:var(--mobile-header-height)!important;grid-template-columns:88px minmax(0,1fr) auto auto!important;padding:0 13px!important;column-gap:7px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo,
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .logo img { width:80px!important;height:68px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu.language-switch-inline { gap:5px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu button { width:38px!important;height:38px!important;min-height:38px!important;padding:7px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .language-menu svg { width:22px!important;height:15px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .mobile-menu-toggle { width:46px!important;height:46px!important }
+  html body #app > :is(.blog-hero, .blog-detail-hero) > .header .mobile-menu-toggle span { width:20px!important }
+}
+
+/* Tablet ana sayfa: giris ve one cikan urun basliklarini tek satirda tut. */
+@media (min-width: 561px) and (max-width: 850px) {
+  html body:has(.brands-carousel) #app > .hero + .split.intro h2 {
+    width: 100% !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    font-size: 38px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  html body:has(.brands-carousel) #app > .hero + .split.intro h2 > br {
+    display: none !important;
+  }
+
+  html body:has(.brands-carousel) #app > .hero + .split.intro + .section > .section-head {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+  }
+
+  html body:has(.brands-carousel) #app > .hero + .split.intro + .section
+  > .section-head > h2 {
+    width: auto !important;
+    max-width: none !important;
+    flex: 1 1 auto !important;
+    white-space: nowrap !important;
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  html body:has(.brands-carousel) #app > .hero + .split.intro + .section
+  > .section-head > a[href="/urunler"] {
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    font-size: 11px !important;
+  }
+
+  html body:has(.brands-carousel) #app > .hero + .split.intro + .section
+  > .section-head > a[href="/urunler"]::after {
+    white-space: nowrap !important;
+  }
+
+  html body:has(.brands-carousel) #app .section.projects > .section-head > h2 {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+  }
+}
+
+
+/* Katalog arsivi aciklamasini baslik satirlarinin dikey merkezine getir. */
+@media (min-width: 761px) {
+  html body #app .catalogue-intro > p {
+    position: relative !important;
+    top: -30px !important;
+    align-self: end !important;
+  }
+}
+
+/* Urun kategori sayfalarinda tum marka kartlari esit uc sutun olarak kalsin. */
+@media (min-width: 901px) {
+  html body #app .catalog-section .catalog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: 360px !important;
+    align-items: stretch !important;
+  }
+
+  html body #app .catalog-section .catalog-grid > .catalog-card,
+  html body #app .catalog-section .catalog-grid > .catalog-card:nth-child(n) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 360px !important;
+    min-height: 360px !important;
+    max-height: 360px !important;
+    aspect-ratio: auto !important;
+  }
+}
+
+/* Hakkimizda: "Seckin Tasarimin Izinde" kart aciklamalari. */
+html body #app .dark.values.section .three article > p {
+  font-size: 14px !important;
+}
+
+/* Proje talebi formu basligi. */
+html body .project-inquiry-modal:not(.product-inquiry-modal)
+.project-inquiry-panel > h2,
+html body .product-inquiry-modal:not(.project-inquiry-modal)
+.product-inquiry-panel > h2 {
+  font-size: 30px !important;
+  line-height: 1.08 !important;
+}
+
+/* 1024px: marka ve koleksiyon kartlarina uzun isimler icin iki sutun alan ver. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  html body #app .catalog-section .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 360px !important;
+  }
+
+  html body #app .catalog-section .catalog-grid > .catalog-card,
+  html body #app .catalog-section .catalog-grid > .catalog-card:nth-child(n) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 360px !important;
+  }
+
+  html body #app .catalog-section .catalog-grid .catalog-card h3 {
+    max-width: calc(100% - 145px) !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+
+  html body #app .catalogue-intro > p {
+    top: 0 !important;
+    align-self: end !important;
+  }
+}
+
+
+/* Keep mobile inquiry forms below the fixed navigation header. */
+@media (max-width:560px){
+  html body #app#app#app ~ .project-inquiry-modal.is-open,
+  html body #app#app#app ~ .product-inquiry-modal.is-open{
+    align-items:flex-start!important;
+    padding:88px 14px 14px!important;
+    overflow-y:auto!important;
+  }
+  html body #app#app#app ~ .project-inquiry-modal.is-open .project-inquiry-panel,
+  html body #app#app#app ~ .product-inquiry-modal.is-open .project-inquiry-panel{
+    height:auto!important;
+    max-height:calc(100dvh - 102px)!important;
+    margin:0 auto!important;
+    overflow-y:auto!important;
+  }
+}
+
+/* Final mobile-only refinements: reference enquiry, about values,
+   reference card navigation and contact phone line. */
+@media (max-width:560px){
+  html body #app#app#app ~ .project-inquiry-modal.is-open:not(.product-inquiry-modal) .project-inquiry-panel{
+    min-height:440px!important;
+    padding-bottom:24px!important;
+  }
+  html body #app#app#app ~ .project-inquiry-modal.is-open:not(.product-inquiry-modal) .project-inquiry-form textarea{
+    min-height:60px!important;
+    height:60px!important;
+  }
+
+  html body:has(.about-process) #app#app#app .dark.values.section .three>article>p{
+    width:calc(100% - 24px)!important;
+    max-width:none!important;
+    margin-right:8px!important;
+    margin-left:16px!important;
+    box-sizing:border-box!important;
+  }
+
+  html body #app#app#app .references-index-section .reference-grid .reference-card{
+    cursor:pointer!important;
+  }
+  html body #app#app#app .references-index-section .reference-grid .reference-card>div>.reference-card-copy{
+    max-width:100%!important;
+  }
+  html body #app#app#app .references-index-section .reference-grid .reference-card>div>span{
+    display:none!important;
+  }
+
+  html body:has(.contact) #app#app#app .contact-details-grid
+  [data-contact-kind="phone"] .contact-item-copy span{
+    white-space:nowrap!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    font-size:10px!important;
+    letter-spacing:-.015em!important;
+  }
+}
+
+/* Final mobile corrections requested after visual review. */
+@media (max-width:560px){
+  html body:has(.about-process) #app#app#app .dark.values.section .three>article>p{
+    width:100%!important;
+    max-width:100%!important;
+    margin-right:auto!important;
+    margin-left:auto!important;
+    text-align:center!important;
+  }
+
+  html body #app#app#app ~ .project-inquiry-modal.is-open:not(.product-inquiry-modal){
+    padding-top:118px!important;
+  }
+  html body #app#app#app ~ .project-inquiry-modal.is-open:not(.product-inquiry-modal) .project-inquiry-panel{
+    min-height:475px!important;
+  }
+  html body #app#app#app ~ .project-inquiry-modal.is-open:not(.product-inquiry-modal) .project-inquiry-form textarea{
+    min-height:72px!important;
+    height:72px!important;
+  }
+
+  html body:has(.contact) #app#app#app .contact-form-area:has([data-contact-panel="general"].active){
+    height:auto!important;
+    min-height:0!important;
+    align-self:start!important;
+    grid-template-rows:auto auto!important;
+  }
+  html body:has(.contact) #app#app#app .contact-form-area:has([data-contact-panel="general"].active)
+  >[data-contact-panel="professional"]{
+    display:none!important;
+  }
+  html body:has(.contact) #app#app#app .contact-form-area:has([data-contact-panel="general"].active)
+  >[data-contact-panel="general"].active{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+}
+
